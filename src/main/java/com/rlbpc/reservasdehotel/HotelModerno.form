@@ -37,11 +37,13 @@
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="jTextField1" pref="160" max="32767" attributes="0"/>
-                  <Component id="jPasswordField1" max="32767" attributes="0"/>
+                  <Component id="Login" pref="160" max="32767" attributes="0"/>
+                  <Component id="Password" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+              <Component id="BtnAutorizar" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="BtnBloquear" min="-2" pref="84" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -54,15 +56,16 @@
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel18" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Login" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel19" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jPasswordField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Password" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Component id="jButton2" min="-2" pref="46" max="-2" attributes="0"/>
+                  <Component id="BtnAutorizar" max="32767" attributes="0"/>
+                  <Component id="BtnBloquear" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="MultiGuiasNivel1" max="32767" attributes="0"/>
@@ -73,6 +76,9 @@
   </Layout>
   <SubComponents>
     <Container class="javax.swing.JTabbedPane" name="MultiGuiasNivel1">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
       <AccessibilityProperties>
         <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
       </AccessibilityProperties>
@@ -93,7 +99,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTabbedPane1" max="32767" attributes="0"/>
+                      <Component id="MultiGuiasNivel2" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -102,14 +108,17 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTabbedPane1" min="-2" pref="760" max="-2" attributes="0"/>
+                      <Component id="MultiGuiasNivel2" min="-2" pref="760" max="-2" attributes="0"/>
                       <EmptySpace pref="27" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Container class="javax.swing.JTabbedPane" name="jTabbedPane1">
+            <Container class="javax.swing.JTabbedPane" name="MultiGuiasNivel2">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
               <SubComponents>
@@ -127,7 +136,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jPanel3" min="-2" pref="471" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="99" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="96" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -142,6 +151,9 @@
                   </Layout>
                   <SubComponents>
                     <Container class="javax.swing.JPanel" name="jPanel3">
+                      <Properties>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
 
                       <Layout>
                         <DimensionLayout dim="0">
@@ -170,27 +182,27 @@
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="BtnCadastraCliente1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="BtnCadastraFuncionario" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="BtnBuscarCliente1" min="-2" pref="96" max="-2" attributes="0"/>
+                                          <Component id="BtnBuscarFuncionario" min="-2" pref="96" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                                           <Component id="Estado1" alignment="0" max="32767" attributes="0"/>
                                           <Component id="Pais1" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="formCEP1" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="Cep1" alignment="0" max="32767" attributes="0"/>
                                           <Component id="Cidade1" alignment="0" max="32767" attributes="0"/>
                                           <Component id="Bairro1" alignment="0" max="32767" attributes="0"/>
                                           <Component id="Numero1" alignment="0" max="32767" attributes="0"/>
                                           <Component id="Logradouro1" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="celular1" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="fone1" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="email1" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="dataNascimento1" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="nacionalidade1" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="passaporte1" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="rg1" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="cpf1" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="nome1" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="Celular1" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="Fone1" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="Email1" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="DataNascimento1" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="DataContratacao1" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="CTPS" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="Rg1" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="Cpf1" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="Nome1" alignment="0" max="32767" attributes="0"/>
                                           <Component id="jScrollPane4" alignment="1" pref="333" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -204,47 +216,47 @@
                                   <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel26" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="nome1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Nome1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="cpf1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Cpf1" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel27" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel28" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="rg1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Rg1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel29" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="passaporte1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="CTPS" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel30" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="nacionalidade1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="DataContratacao1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel31" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="dataNascimento1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="DataNascimento1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel32" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="email1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Email1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel33" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="fone1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Fone1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel34" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="celular1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Celular1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -269,7 +281,7 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel38" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="formCEP1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Cep1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -293,8 +305,8 @@
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="BtnCadastraCliente1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="BtnBuscarCliente1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="BtnCadastraFuncionario" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="BtnBuscarFuncionario" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
@@ -307,9 +319,15 @@
                             <Property name="text" type="java.lang.String" value="Nome:"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="nome1">
+                        <Component class="javax.swing.JTextField" name="Nome1">
+                          <Properties>
+                            <Property name="enabled" type="boolean" value="false"/>
+                          </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="cpf1">
+                        <Component class="javax.swing.JTextField" name="Cpf1">
+                          <Properties>
+                            <Property name="enabled" type="boolean" value="false"/>
+                          </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel27">
                           <Properties>
@@ -351,34 +369,57 @@
                             <Property name="text" type="java.lang.String" value="Celular:"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="rg1">
+                        <Component class="javax.swing.JTextField" name="Rg1">
+                          <Properties>
+                            <Property name="enabled" type="boolean" value="false"/>
+                          </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="passaporte1">
+                        <Component class="javax.swing.JTextField" name="CTPS">
+                          <Properties>
+                            <Property name="enabled" type="boolean" value="false"/>
+                          </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="nacionalidade1">
+                        <Component class="javax.swing.JTextField" name="DataContratacao1">
+                          <Properties>
+                            <Property name="enabled" type="boolean" value="false"/>
+                          </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="dataNascimento1">
+                        <Component class="javax.swing.JTextField" name="DataNascimento1">
+                          <Properties>
+                            <Property name="enabled" type="boolean" value="false"/>
+                          </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="email1">
+                        <Component class="javax.swing.JTextField" name="Email1">
+                          <Properties>
+                            <Property name="enabled" type="boolean" value="false"/>
+                          </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="fone1">
+                        <Component class="javax.swing.JTextField" name="Fone1">
+                          <Properties>
+                            <Property name="enabled" type="boolean" value="false"/>
+                          </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="celular1">
+                        <Component class="javax.swing.JTextField" name="Celular1">
+                          <Properties>
+                            <Property name="enabled" type="boolean" value="false"/>
+                          </Properties>
                         </Component>
-                        <Component class="javax.swing.JButton" name="BtnCadastraCliente1">
+                        <Component class="javax.swing.JButton" name="BtnCadastraFuncionario">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="Cadastrar"/>
+                            <Property name="enabled" type="boolean" value="false"/>
                           </Properties>
                           <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnCadastraCliente1ActionPerformed"/>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnCadastraFuncionarioActionPerformed"/>
                           </Events>
                         </Component>
-                        <Component class="javax.swing.JButton" name="BtnBuscarCliente1">
+                        <Component class="javax.swing.JButton" name="BtnBuscarFuncionario">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="Buscar"/>
+                            <Property name="enabled" type="boolean" value="false"/>
                           </Properties>
                           <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnBuscarCliente1ActionPerformed"/>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnBuscarFuncionarioActionPerformed"/>
                           </Events>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel35">
@@ -412,19 +453,37 @@
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="Logradouro1">
+                          <Properties>
+                            <Property name="enabled" type="boolean" value="false"/>
+                          </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="Numero1">
+                          <Properties>
+                            <Property name="enabled" type="boolean" value="false"/>
+                          </Properties>
                           <Events>
                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Numero1ActionPerformed"/>
                           </Events>
                         </Component>
                         <Component class="javax.swing.JTextField" name="Bairro1">
+                          <Properties>
+                            <Property name="enabled" type="boolean" value="false"/>
+                          </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="Cidade1">
+                          <Properties>
+                            <Property name="enabled" type="boolean" value="false"/>
+                          </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="formCEP1">
+                        <Component class="javax.swing.JTextField" name="Cep1">
+                          <Properties>
+                            <Property name="enabled" type="boolean" value="false"/>
+                          </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="Pais1">
+                          <Properties>
+                            <Property name="enabled" type="boolean" value="false"/>
+                          </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel41">
                           <Properties>
@@ -442,6 +501,7 @@
                               <Properties>
                                 <Property name="columns" type="int" value="20"/>
                                 <Property name="rows" type="int" value="5"/>
+                                <Property name="enabled" type="boolean" value="false"/>
                               </Properties>
                             </Component>
                           </SubComponents>
@@ -452,6 +512,9 @@
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="Estado1">
+                          <Properties>
+                            <Property name="enabled" type="boolean" value="false"/>
+                          </Properties>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -500,20 +563,20 @@
                                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                       <Component id="Estado" alignment="0" max="32767" attributes="0"/>
                                       <Component id="Pais" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="formCEP" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="Cep" alignment="0" max="32767" attributes="0"/>
                                       <Component id="Cidade" alignment="0" max="32767" attributes="0"/>
                                       <Component id="Bairro" alignment="0" max="32767" attributes="0"/>
                                       <Component id="Numero" alignment="0" max="32767" attributes="0"/>
                                       <Component id="Logradouro" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="celular" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="fone" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="email" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="dataNascimento" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="nacionalidade" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="passaporte" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="rg" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="cpf" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="nome" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="Celular" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="Fone" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="Email" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="DataNascimento" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="Nacionalidade" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="Passaporte" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="Rg" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="Cpf" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="Nome" alignment="0" max="32767" attributes="0"/>
                                       <Component id="jScrollPane1" pref="333" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
@@ -527,47 +590,47 @@
                               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="nome" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Nome" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="cpf" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Cpf" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="rg" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Rg" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="passaporte" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Passaporte" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="nacionalidade" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Nacionalidade" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="dataNascimento" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="DataNascimento" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="email" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Email" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="fone" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Fone" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="celular" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Celular" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -592,7 +655,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="formCEP" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Cep" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -630,9 +693,15 @@
                         <Property name="text" type="java.lang.String" value="Nome:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="nome">
+                    <Component class="javax.swing.JTextField" name="Nome">
+                      <Properties>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="cpf">
+                    <Component class="javax.swing.JTextField" name="Cpf">
+                      <Properties>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel2">
                       <Properties>
@@ -674,23 +743,45 @@
                         <Property name="text" type="java.lang.String" value="Celular:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="rg">
+                    <Component class="javax.swing.JTextField" name="Rg">
+                      <Properties>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="passaporte">
+                    <Component class="javax.swing.JTextField" name="Passaporte">
+                      <Properties>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="nacionalidade">
+                    <Component class="javax.swing.JTextField" name="Nacionalidade">
+                      <Properties>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="dataNascimento">
+                    <Component class="javax.swing.JTextField" name="DataNascimento">
+                      <Properties>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="email">
+                    <Component class="javax.swing.JTextField" name="Email">
+                      <Properties>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="fone">
+                    <Component class="javax.swing.JTextField" name="Fone">
+                      <Properties>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="celular">
+                    <Component class="javax.swing.JTextField" name="Celular">
+                      <Properties>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
                     </Component>
                     <Component class="javax.swing.JButton" name="BtnCadastraCliente">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Cadastrar"/>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnCadastraClienteActionPerformed"/>
@@ -699,6 +790,7 @@
                     <Component class="javax.swing.JButton" name="BtnBuscarCliente">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Buscar"/>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnBuscarClienteActionPerformed"/>
@@ -735,19 +827,37 @@
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="Logradouro">
+                      <Properties>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="Numero">
+                      <Properties>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NumeroActionPerformed"/>
                       </Events>
                     </Component>
                     <Component class="javax.swing.JTextField" name="Bairro">
+                      <Properties>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="Cidade">
+                      <Properties>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="formCEP">
+                    <Component class="javax.swing.JTextField" name="Cep">
+                      <Properties>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="Pais">
+                      <Properties>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel16">
                       <Properties>
@@ -765,6 +875,7 @@
                           <Properties>
                             <Property name="columns" type="int" value="20"/>
                             <Property name="rows" type="int" value="5"/>
+                            <Property name="enabled" type="boolean" value="false"/>
                           </Properties>
                         </Component>
                       </SubComponents>
@@ -775,6 +886,9 @@
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="Estado">
+                      <Properties>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -804,7 +918,7 @@
                               <EmptySpace min="28" pref="28" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="jScrollPane3" max="32767" attributes="0"/>
-                                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="BtnAnexarFoto" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" alignment="1" attributes="0">
                                       <Group type="103" groupAlignment="1" attributes="0">
                                           <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
@@ -814,17 +928,17 @@
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="jComboBox1" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="jTextField3" max="32767" attributes="0"/>
-                                          <Component id="jTextField4" max="32767" attributes="0"/>
+                                          <Component id="TipoSuite" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="NumSuite" max="32767" attributes="0"/>
+                                          <Component id="ValorDiaria" max="32767" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="capacidadePessoasSlider" min="-2" pref="111" max="-2" attributes="0"/>
+                                              <Component id="CapacidadePessoasSlider" min="-2" pref="111" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jButton3" min="-2" pref="203" max="-2" attributes="0"/>
+                                      <Component id="BtnCadastraQuarto" min="-2" pref="203" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="jLabel25" alignment="0" max="32767" attributes="0"/>
                               </Group>
@@ -838,12 +952,12 @@
                               <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel20" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="NumSuite" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel21" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="TipoSuite" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -851,18 +965,18 @@
                                       <Component id="jLabel22" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel24" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="capacidadePessoasSlider" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Component id="CapacidadePessoasSlider" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jTextField4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="ValorDiaria" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel23" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jButton3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="BtnCadastraQuarto" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jLabel25" min="-2" pref="357" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                              <Component id="BtnAnexarFoto" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="jScrollPane3" min="-2" pref="160" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
@@ -891,7 +1005,7 @@
                         <Property name="text" type="java.lang.String" value="Valor da di&#xe1;ria (R$):"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JComboBox" name="jComboBox1">
+                    <Component class="javax.swing.JComboBox" name="TipoSuite">
                       <Properties>
                         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                           <StringArray count="2">
@@ -899,17 +1013,21 @@
                             <StringItem index="1" value="Luxo"/>
                           </StringArray>
                         </Property>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox1ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TipoSuiteActionPerformed"/>
                       </Events>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField3">
+                    <Component class="javax.swing.JTextField" name="NumSuite">
+                      <Properties>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
                     </Component>
-                    <Component class="javax.swing.JSlider" name="capacidadePessoasSlider">
+                    <Component class="javax.swing.JSlider" name="CapacidadePessoasSlider">
                       <Properties>
                         <Property name="maximum" type="int" value="10"/>
                         <Property name="minimum" type="int" value="1"/>
@@ -923,12 +1041,16 @@
                         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                           <Color id="Default Cursor"/>
                         </Property>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="capacidadePessoasSliderStateChanged"/>
+                        <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="CapacidadePessoasSliderStateChanged"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField4">
+                    <Component class="javax.swing.JTextField" name="ValorDiaria">
+                      <Properties>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel24">
                       <Properties>
@@ -947,16 +1069,19 @@
                             <BevelBorder/>
                           </Border>
                         </Property>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton1">
+                    <Component class="javax.swing.JButton" name="BtnAnexarFoto">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Anexar foto"/>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton3">
+                    <Component class="javax.swing.JButton" name="BtnCadastraQuarto">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Cadastrar Quarto"/>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                     </Component>
                     <Container class="javax.swing.JScrollPane" name="jScrollPane3">
@@ -966,7 +1091,7 @@
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                       <SubComponents>
-                        <Component class="javax.swing.JTextArea" name="jTextArea1">
+                        <Component class="javax.swing.JTextArea" name="TxtDescricaoSuite">
                           <Properties>
                             <Property name="columns" type="int" value="20"/>
                             <Property name="lineWrap" type="boolean" value="true"/>
@@ -1102,12 +1227,15 @@
         </Container>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="jButton2">
+    <Component class="javax.swing.JButton" name="BtnAutorizar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Autorizar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnAutorizarActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField1">
+    <Component class="javax.swing.JTextField" name="Login">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel18">
       <Properties>
@@ -1119,10 +1247,15 @@
         <Property name="text" type="java.lang.String" value="Senha:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JPasswordField" name="jPasswordField1">
+    <Component class="javax.swing.JPasswordField" name="Password">
+    </Component>
+    <Component class="javax.swing.JButton" name="BtnBloquear">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jPasswordField1"/>
+        <Property name="text" type="java.lang.String" value="Bloquear"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnBloquearActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

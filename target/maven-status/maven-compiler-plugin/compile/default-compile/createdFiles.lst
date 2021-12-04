@@ -1,11 +1,16 @@
 com\rlbpc\reservasdehotel\instances\Reserva.class
+com\rlbpc\reservasdehotel\utils\DadosPersistence.class
 com\rlbpc\reservasdehotel\HotelModerno$4.class
 com\rlbpc\reservasdehotel\instances\Hospede.class
 com\rlbpc\reservasdehotel\instances\Apartamento.class
 com\rlbpc\reservasdehotel\instances\Funcionario.class
 com\rlbpc\reservasdehotel\instances\Endereco.class
 com\rlbpc\reservasdehotel\HotelModerno$9.class
+com\rlbpc\reservasdehotel\utils\AppPersistenceException.class
+com\rlbpc\reservasdehotel\utils\CreateDatabase.class
+com\rlbpc\reservasdehotel\HotelModerno$10.class
 com\rlbpc\reservasdehotel\HotelModerno$5.class
+com\rlbpc\reservasdehotel\HotelModerno$11.class
 com\rlbpc\reservasdehotel\HotelModerno$1.class
 com\rlbpc\reservasdehotel\HotelModerno$2.class
 com\rlbpc\reservasdehotel\HotelModerno.class

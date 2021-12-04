@@ -38,12 +38,12 @@ public class HotelModerno extends javax.swing.JFrame {
 
         MultiGuiasNivel1 = new javax.swing.JTabbedPane();
         GuiaMeuHotel = new javax.swing.JPanel();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
+        MultiGuiasNivel2 = new javax.swing.JTabbedPane();
         jPanel5 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel26 = new javax.swing.JLabel();
-        nome1 = new javax.swing.JTextField();
-        cpf1 = new javax.swing.JTextField();
+        Nome1 = new javax.swing.JTextField();
+        Cpf1 = new javax.swing.JTextField();
         jLabel27 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
@@ -52,15 +52,15 @@ public class HotelModerno extends javax.swing.JFrame {
         jLabel32 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
-        rg1 = new javax.swing.JTextField();
-        passaporte1 = new javax.swing.JTextField();
-        nacionalidade1 = new javax.swing.JTextField();
-        dataNascimento1 = new javax.swing.JTextField();
-        email1 = new javax.swing.JTextField();
-        fone1 = new javax.swing.JTextField();
-        celular1 = new javax.swing.JTextField();
-        BtnCadastraCliente1 = new javax.swing.JButton();
-        BtnBuscarCliente1 = new javax.swing.JButton();
+        Rg1 = new javax.swing.JTextField();
+        CTPS = new javax.swing.JTextField();
+        DataContratacao1 = new javax.swing.JTextField();
+        DataNascimento1 = new javax.swing.JTextField();
+        Email1 = new javax.swing.JTextField();
+        Fone1 = new javax.swing.JTextField();
+        Celular1 = new javax.swing.JTextField();
+        BtnCadastraFuncionario = new javax.swing.JButton();
+        BtnBuscarFuncionario = new javax.swing.JButton();
         jLabel35 = new javax.swing.JLabel();
         jLabel36 = new javax.swing.JLabel();
         jLabel37 = new javax.swing.JLabel();
@@ -71,7 +71,7 @@ public class HotelModerno extends javax.swing.JFrame {
         Numero1 = new javax.swing.JTextField();
         Bairro1 = new javax.swing.JTextField();
         Cidade1 = new javax.swing.JTextField();
-        formCEP1 = new javax.swing.JTextField();
+        Cep1 = new javax.swing.JTextField();
         Pais1 = new javax.swing.JTextField();
         jLabel41 = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
@@ -80,8 +80,8 @@ public class HotelModerno extends javax.swing.JFrame {
         Estado1 = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        nome = new javax.swing.JTextField();
-        cpf = new javax.swing.JTextField();
+        Nome = new javax.swing.JTextField();
+        Cpf = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -90,13 +90,13 @@ public class HotelModerno extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        rg = new javax.swing.JTextField();
-        passaporte = new javax.swing.JTextField();
-        nacionalidade = new javax.swing.JTextField();
-        dataNascimento = new javax.swing.JTextField();
-        email = new javax.swing.JTextField();
-        fone = new javax.swing.JTextField();
-        celular = new javax.swing.JTextField();
+        Rg = new javax.swing.JTextField();
+        Passaporte = new javax.swing.JTextField();
+        Nacionalidade = new javax.swing.JTextField();
+        DataNascimento = new javax.swing.JTextField();
+        Email = new javax.swing.JTextField();
+        Fone = new javax.swing.JTextField();
+        Celular = new javax.swing.JTextField();
         BtnCadastraCliente = new javax.swing.JButton();
         BtnBuscarCliente = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
@@ -109,7 +109,7 @@ public class HotelModerno extends javax.swing.JFrame {
         Numero = new javax.swing.JTextField();
         Bairro = new javax.swing.JTextField();
         Cidade = new javax.swing.JTextField();
-        formCEP = new javax.swing.JTextField();
+        Cep = new javax.swing.JTextField();
         Pais = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -121,16 +121,16 @@ public class HotelModerno extends javax.swing.JFrame {
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jTextField3 = new javax.swing.JTextField();
-        capacidadePessoasSlider = new javax.swing.JSlider();
-        jTextField4 = new javax.swing.JTextField();
+        TipoSuite = new javax.swing.JComboBox<>();
+        NumSuite = new javax.swing.JTextField();
+        CapacidadePessoasSlider = new javax.swing.JSlider();
+        ValorDiaria = new javax.swing.JTextField();
         jLabel24 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        BtnAnexarFoto = new javax.swing.JButton();
+        BtnCadastraQuarto = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        TxtDescricaoSuite = new javax.swing.JTextArea();
         GuiaReservas = new javax.swing.JPanel();
         jLabel43 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
@@ -142,18 +142,29 @@ public class HotelModerno extends javax.swing.JFrame {
         jSpinner3 = new javax.swing.JSpinner();
         jSpinner4 = new javax.swing.JSpinner();
         canvas1 = new java.awt.Canvas();
-        jButton2 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        BtnAutorizar = new javax.swing.JButton();
+        Login = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        Password = new javax.swing.JPasswordField();
+        BtnBloquear = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("PSII - Hotel - Autor: Rodolfo Lucas Bortoluzzi");
         setResizable(false);
         setSize(new java.awt.Dimension(600, 900));
 
+        MultiGuiasNivel1.setEnabled(false);
+
+        MultiGuiasNivel2.setEnabled(false);
+
+        jPanel3.setEnabled(false);
+
         jLabel26.setText("Nome:");
+
+        Nome1.setEnabled(false);
+
+        Cpf1.setEnabled(false);
 
         jLabel27.setText("CPF:");
 
@@ -171,17 +182,33 @@ public class HotelModerno extends javax.swing.JFrame {
 
         jLabel34.setText("Celular:");
 
-        BtnCadastraCliente1.setText("Cadastrar");
-        BtnCadastraCliente1.addActionListener(new java.awt.event.ActionListener() {
+        Rg1.setEnabled(false);
+
+        CTPS.setEnabled(false);
+
+        DataContratacao1.setEnabled(false);
+
+        DataNascimento1.setEnabled(false);
+
+        Email1.setEnabled(false);
+
+        Fone1.setEnabled(false);
+
+        Celular1.setEnabled(false);
+
+        BtnCadastraFuncionario.setText("Cadastrar");
+        BtnCadastraFuncionario.setEnabled(false);
+        BtnCadastraFuncionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnCadastraCliente1ActionPerformed(evt);
+                BtnCadastraFuncionarioActionPerformed(evt);
             }
         });
 
-        BtnBuscarCliente1.setText("Buscar");
-        BtnBuscarCliente1.addActionListener(new java.awt.event.ActionListener() {
+        BtnBuscarFuncionario.setText("Buscar");
+        BtnBuscarFuncionario.setEnabled(false);
+        BtnBuscarFuncionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnBuscarCliente1ActionPerformed(evt);
+                BtnBuscarFuncionarioActionPerformed(evt);
             }
         });
 
@@ -197,19 +224,33 @@ public class HotelModerno extends javax.swing.JFrame {
 
         jLabel40.setText("Número:");
 
+        Logradouro1.setEnabled(false);
+
+        Numero1.setEnabled(false);
         Numero1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Numero1ActionPerformed(evt);
             }
         });
 
+        Bairro1.setEnabled(false);
+
+        Cidade1.setEnabled(false);
+
+        Cep1.setEnabled(false);
+
+        Pais1.setEnabled(false);
+
         jLabel41.setText("Complemento:");
 
         Complemento1.setColumns(20);
         Complemento1.setRows(5);
+        Complemento1.setEnabled(false);
         jScrollPane4.setViewportView(Complemento1);
 
         jLabel42.setText("Estado:");
+
+        Estado1.setEnabled(false);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -238,26 +279,26 @@ public class HotelModerno extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(BtnCadastraCliente1)
+                        .addComponent(BtnCadastraFuncionario)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(BtnBuscarCliente1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(BtnBuscarFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(Estado1, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(Pais1, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(formCEP1, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(Cep1, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(Cidade1, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(Bairro1, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(Numero1, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(Logradouro1, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(celular1, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(fone1, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(email1, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(dataNascimento1, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(nacionalidade1, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(passaporte1, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(rg1, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(cpf1, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(nome1, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(Celular1, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(Fone1, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(Email1, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(DataNascimento1, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(DataContratacao1, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(CTPS, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(Rg1, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(Cpf1, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(Nome1, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 333, Short.MAX_VALUE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -267,39 +308,39 @@ public class HotelModerno extends javax.swing.JFrame {
                 .addGap(24, 24, 24)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel26)
-                    .addComponent(nome1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Nome1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cpf1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Cpf1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel27))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel28)
-                    .addComponent(rg1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Rg1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel29)
-                    .addComponent(passaporte1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(CTPS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel30)
-                    .addComponent(nacionalidade1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(DataContratacao1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel31)
-                    .addComponent(dataNascimento1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(DataNascimento1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel32)
-                    .addComponent(email1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Email1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel33)
-                    .addComponent(fone1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Fone1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel34)
-                    .addComponent(celular1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Celular1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel35)
@@ -319,7 +360,7 @@ public class HotelModerno extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel38)
-                    .addComponent(formCEP1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Cep1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel39)
@@ -337,8 +378,8 @@ public class HotelModerno extends javax.swing.JFrame {
                         .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(BtnCadastraCliente1)
-                    .addComponent(BtnBuscarCliente1))
+                    .addComponent(BtnCadastraFuncionario)
+                    .addComponent(BtnBuscarFuncionario))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -348,7 +389,7 @@ public class HotelModerno extends javax.swing.JFrame {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 471, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 99, Short.MAX_VALUE))
+                .addGap(0, 96, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -357,9 +398,13 @@ public class HotelModerno extends javax.swing.JFrame {
                 .addGap(0, 132, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Cadastro de Funcionários", jPanel5);
+        MultiGuiasNivel2.addTab("Cadastro de Funcionários", jPanel5);
 
         jLabel1.setText("Nome:");
+
+        Nome.setEnabled(false);
+
+        Cpf.setEnabled(false);
 
         jLabel2.setText("CPF:");
 
@@ -377,7 +422,22 @@ public class HotelModerno extends javax.swing.JFrame {
 
         jLabel9.setText("Celular:");
 
+        Rg.setEnabled(false);
+
+        Passaporte.setEnabled(false);
+
+        Nacionalidade.setEnabled(false);
+
+        DataNascimento.setEnabled(false);
+
+        Email.setEnabled(false);
+
+        Fone.setEnabled(false);
+
+        Celular.setEnabled(false);
+
         BtnCadastraCliente.setText("Cadastrar");
+        BtnCadastraCliente.setEnabled(false);
         BtnCadastraCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BtnCadastraClienteActionPerformed(evt);
@@ -385,6 +445,7 @@ public class HotelModerno extends javax.swing.JFrame {
         });
 
         BtnBuscarCliente.setText("Buscar");
+        BtnBuscarCliente.setEnabled(false);
         BtnBuscarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BtnBuscarClienteActionPerformed(evt);
@@ -403,19 +464,33 @@ public class HotelModerno extends javax.swing.JFrame {
 
         jLabel15.setText("Número:");
 
+        Logradouro.setEnabled(false);
+
+        Numero.setEnabled(false);
         Numero.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NumeroActionPerformed(evt);
             }
         });
 
+        Bairro.setEnabled(false);
+
+        Cidade.setEnabled(false);
+
+        Cep.setEnabled(false);
+
+        Pais.setEnabled(false);
+
         jLabel16.setText("Complemento:");
 
         Complemento.setColumns(20);
         Complemento.setRows(5);
+        Complemento.setEnabled(false);
         jScrollPane1.setViewportView(Complemento);
 
         jLabel17.setText("Estado:");
+
+        Estado.setEnabled(false);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -450,20 +525,20 @@ public class HotelModerno extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(Estado, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(Pais, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(formCEP, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(Cep, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(Cidade, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(Bairro, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(Numero, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(Logradouro, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(celular, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(fone, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(email, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(dataNascimento, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(nacionalidade, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(passaporte, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(rg, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(cpf, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(nome, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(Celular, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(Fone, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(Email, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(DataNascimento, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(Nacionalidade, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(Passaporte, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(Rg, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(Cpf, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(Nome, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 333, Short.MAX_VALUE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -473,39 +548,39 @@ public class HotelModerno extends javax.swing.JFrame {
                 .addGap(24, 24, 24)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(nome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Nome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cpf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Cpf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(rg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Rg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(passaporte, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Passaporte, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(nacionalidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Nacionalidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(dataNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(DataNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(fone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Fone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
-                    .addComponent(celular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Celular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
@@ -525,7 +600,7 @@ public class HotelModerno extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel13)
-                    .addComponent(formCEP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Cep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14)
@@ -548,7 +623,7 @@ public class HotelModerno extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Cadastrar Cliente", jPanel2);
+        MultiGuiasNivel2.addTab("Cadastrar Cliente", jPanel2);
 
         jPanel4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel4.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
@@ -561,24 +636,30 @@ public class HotelModerno extends javax.swing.JFrame {
 
         jLabel23.setText("Valor da diária (R$):");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Simples", "Luxo" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        TipoSuite.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Simples", "Luxo" }));
+        TipoSuite.setEnabled(false);
+        TipoSuite.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                TipoSuiteActionPerformed(evt);
             }
         });
 
-        capacidadePessoasSlider.setMaximum(10);
-        capacidadePessoasSlider.setMinimum(1);
-        capacidadePessoasSlider.setMinorTickSpacing(1);
-        capacidadePessoasSlider.setToolTipText("1\n5\n10");
-        capacidadePessoasSlider.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        capacidadePessoasSlider.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        capacidadePessoasSlider.addChangeListener(new javax.swing.event.ChangeListener() {
+        NumSuite.setEnabled(false);
+
+        CapacidadePessoasSlider.setMaximum(10);
+        CapacidadePessoasSlider.setMinimum(1);
+        CapacidadePessoasSlider.setMinorTickSpacing(1);
+        CapacidadePessoasSlider.setToolTipText("1\n5\n10");
+        CapacidadePessoasSlider.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        CapacidadePessoasSlider.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        CapacidadePessoasSlider.setEnabled(false);
+        CapacidadePessoasSlider.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                capacidadePessoasSliderStateChanged(evt);
+                CapacidadePessoasSliderStateChanged(evt);
             }
         });
+
+        ValorDiaria.setEnabled(false);
 
         jLabel24.setText("jLabel24");
 
@@ -586,17 +667,20 @@ public class HotelModerno extends javax.swing.JFrame {
         jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel25.setText("A foto não foi anexada.");
         jLabel25.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel25.setEnabled(false);
 
-        jButton1.setText("Anexar foto");
+        BtnAnexarFoto.setText("Anexar foto");
+        BtnAnexarFoto.setEnabled(false);
 
-        jButton3.setText("Cadastrar Quarto");
+        BtnCadastraQuarto.setText("Cadastrar Quarto");
+        BtnCadastraQuarto.setEnabled(false);
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setLineWrap(true);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("Inclua aqui a descrição e outras informações pertinentes sobre o quarto");
-        jTextArea1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        jScrollPane3.setViewportView(jTextArea1);
+        TxtDescricaoSuite.setColumns(20);
+        TxtDescricaoSuite.setLineWrap(true);
+        TxtDescricaoSuite.setRows(5);
+        TxtDescricaoSuite.setText("Inclua aqui a descrição e outras informações pertinentes sobre o quarto");
+        TxtDescricaoSuite.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jScrollPane3.setViewportView(TxtDescricaoSuite);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -606,7 +690,7 @@ public class HotelModerno extends javax.swing.JFrame {
                 .addGap(28, 28, 28)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane3)
-                    .addComponent(jButton1)
+                    .addComponent(BtnAnexarFoto)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel23)
@@ -615,15 +699,15 @@ public class HotelModerno extends javax.swing.JFrame {
                             .addComponent(jLabel22))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTextField3)
-                            .addComponent(jTextField4)
+                            .addComponent(TipoSuite, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(NumSuite)
+                            .addComponent(ValorDiaria)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
                                 .addComponent(jLabel24)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(capacidadePessoasSlider, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(CapacidadePessoasSlider, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(BtnCadastraQuarto, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(35, Short.MAX_VALUE))
         );
@@ -633,32 +717,32 @@ public class HotelModerno extends javax.swing.JFrame {
                 .addGap(17, 17, 17)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel20)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(NumSuite, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel21)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(TipoSuite, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel22)
                         .addComponent(jLabel24))
-                    .addComponent(capacidadePessoasSlider, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(CapacidadePessoasSlider, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(8, 8, 8)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ValorDiaria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel23)
-                    .addComponent(jButton3))
+                    .addComponent(BtnCadastraQuarto))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1)
+                .addComponent(BtnAnexarFoto)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(108, 108, 108))
         );
 
-        jTabbedPane1.addTab("Cadastros de Quartos", jPanel4);
+        MultiGuiasNivel2.addTab("Cadastros de Quartos", jPanel4);
 
         javax.swing.GroupLayout GuiaMeuHotelLayout = new javax.swing.GroupLayout(GuiaMeuHotel);
         GuiaMeuHotel.setLayout(GuiaMeuHotelLayout);
@@ -666,14 +750,14 @@ public class HotelModerno extends javax.swing.JFrame {
             GuiaMeuHotelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(GuiaMeuHotelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1)
+                .addComponent(MultiGuiasNivel2)
                 .addContainerGap())
         );
         GuiaMeuHotelLayout.setVerticalGroup(
             GuiaMeuHotelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(GuiaMeuHotelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 760, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(MultiGuiasNivel2, javax.swing.GroupLayout.PREFERRED_SIZE, 760, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(27, Short.MAX_VALUE))
         );
 
@@ -746,13 +830,23 @@ public class HotelModerno extends javax.swing.JFrame {
 
         MultiGuiasNivel1.addTab("Reservas", GuiaReservas);
 
-        jButton2.setText("Autorizar");
+        BtnAutorizar.setText("Autorizar");
+        BtnAutorizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnAutorizarActionPerformed(evt);
+            }
+        });
 
         jLabel18.setText("Login:");
 
         jLabel19.setText("Senha:");
 
-        jPasswordField1.setText("jPasswordField1");
+        BtnBloquear.setText("Bloquear");
+        BtnBloquear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnBloquearActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -766,10 +860,12 @@ public class HotelModerno extends javax.swing.JFrame {
                     .addComponent(jLabel18))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
-                    .addComponent(jPasswordField1))
+                    .addComponent(Login, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+                    .addComponent(Password))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2)
+                .addComponent(BtnAutorizar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(BtnBloquear, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -780,12 +876,13 @@ public class HotelModerno extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel18)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(Login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel19)
-                            .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(Password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(BtnAutorizar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(BtnBloquear, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(MultiGuiasNivel1)
                 .addContainerGap())
@@ -797,18 +894,18 @@ public class HotelModerno extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BtnCadastraClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCadastraClienteActionPerformed
-        hospede.setNome(nome.toString());
-        hospede.setCpf(cpf.toString());
-        hospede.setFone(fone.toString());
-        hospede.setCelular(celular.toString());
-        hospede.setDataNascimento(dataNascimento.toString());
-        hospede.setRg(rg.toString());
-        hospede.setPassaporte(passaporte.toString());
-        hospede.setEmail(email.toString());
-        hospede.setNacionalidade(nacionalidade.toString());
+        hospede.setNome(Nome.toString());
+        hospede.setCpf(Cpf.toString());
+        hospede.setFone(Fone.toString());
+        hospede.setCelular(Celular.toString());
+        hospede.setDataNascimento(DataNascimento.toString());
+        hospede.setRg(Rg.toString());
+        hospede.setPassaporte(Passaporte.toString());
+        hospede.setEmail(Email.toString());
+        hospede.setNacionalidade(Nacionalidade.toString());
         endereco.setLogradouro(Logradouro.toString());
         endereco.setCidade(Cidade.toString());
-        endereco.setCEP(formCEP.toString());
+        endereco.setCEP(Cep.toString());
         endereco.setComplemento(Complemento.toString());
         endereco.setEstado(Estado.toString());
         endereco.setPais(Pais.toString());        
@@ -822,25 +919,134 @@ public class HotelModerno extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_NumeroActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void TipoSuiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TipoSuiteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_TipoSuiteActionPerformed
 
-    private void capacidadePessoasSliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_capacidadePessoasSliderStateChanged
+    private void CapacidadePessoasSliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_CapacidadePessoasSliderStateChanged
                 // TODO add your handling code here:
-    }//GEN-LAST:event_capacidadePessoasSliderStateChanged
+    }//GEN-LAST:event_CapacidadePessoasSliderStateChanged
 
-    private void BtnCadastraCliente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCadastraCliente1ActionPerformed
+    private void BtnCadastraFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCadastraFuncionarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BtnCadastraCliente1ActionPerformed
+    }//GEN-LAST:event_BtnCadastraFuncionarioActionPerformed
 
-    private void BtnBuscarCliente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBuscarCliente1ActionPerformed
+    private void BtnBuscarFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBuscarFuncionarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BtnBuscarCliente1ActionPerformed
+    }//GEN-LAST:event_BtnBuscarFuncionarioActionPerformed
 
     private void Numero1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Numero1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Numero1ActionPerformed
+
+    private void BtnAutorizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAutorizarActionPerformed
+        if (Login.getText().toString().equals("Rodolfo")){
+            String strPass = new String(Password.getPassword()).trim();
+            if (strPass.equals("123456")){
+                Nome.setEnabled(true);
+                Nome1.setEnabled(true);
+                Cpf.setEnabled(true);
+                Cpf1.setEnabled(true);
+                Rg.setEnabled(true);
+                Rg1.setEnabled((true));
+                Passaporte.setEnabled(true);
+                CTPS.setEnabled(true);
+                Nacionalidade.setEnabled(true);
+                DataNascimento.setEnabled(true);
+                DataNascimento1.setEnabled(true);
+                DataContratacao1.setEnabled(true);
+                Email.setEnabled(true);
+                Email1.setEnabled(true);
+                Fone.setEnabled(true);
+                Fone1.setEnabled(true);
+                Celular.setEnabled(true);
+                Celular1.setEnabled(true);
+                Logradouro.setEnabled(true);
+                Logradouro1.setEnabled(true);
+                Numero.setEnabled(true);
+                Numero1.setEnabled(true);
+                Bairro.setEnabled(true);
+                Bairro1.setEnabled(true);
+                Cidade.setEnabled(true);
+                Cidade1.setEnabled(true);
+                Cep.setEnabled(true);
+                Cep1.setEnabled(true);
+                Pais.setEnabled(true);
+                Pais1.setEnabled(true);
+                Estado.setEnabled(true);
+                Estado1.setEnabled(true);
+                Complemento.setEnabled(true);
+                Complemento1.setEnabled(true);
+                MultiGuiasNivel1.setEnabled(true);
+                MultiGuiasNivel2.setEnabled(true);
+                BtnCadastraCliente.setEnabled(true);
+                BtnBuscarCliente.setEnabled(true);
+                BtnCadastraFuncionario.setEnabled(true);
+                BtnBuscarFuncionario.setEnabled(true);
+                NumSuite.setEnabled(true);
+                TipoSuite.setEnabled(true);
+                CapacidadePessoasSlider.setEnabled(true);
+                ValorDiaria.setEnabled(true);
+                BtnCadastraQuarto.setEnabled(true);
+                BtnAnexarFoto.setEnabled(true);
+                TxtDescricaoSuite.setEnabled(true);
+                Login.setText("");
+                Password.setText("");
+            }
+        }
+    }//GEN-LAST:event_BtnAutorizarActionPerformed
+
+    private void BtnBloquearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBloquearActionPerformed
+        Nome.setEnabled(false);
+        Nome1.setEnabled(false);
+        Cpf.setEnabled(false);
+        Cpf1.setEnabled(false);
+        Rg.setEnabled(false);
+        Rg1.setEnabled((false));
+        Passaporte.setEnabled(false);
+        CTPS.setEnabled(false);
+        Nacionalidade.setEnabled(false);
+        DataNascimento.setEnabled(false);
+        DataNascimento1.setEnabled(false);
+        DataContratacao1.setEnabled(false);
+        Email.setEnabled(false);
+        Email1.setEnabled(false);
+        Fone.setEnabled(false);
+        Fone1.setEnabled(false);
+        Celular.setEnabled(false);
+        Celular1.setEnabled(false);
+        Logradouro.setEnabled(false);
+        Logradouro1.setEnabled(false);
+        Numero.setEnabled(false);
+        Numero1.setEnabled(false);
+        Bairro.setEnabled(false);
+        Bairro1.setEnabled(false);
+        Cidade.setEnabled(false);
+        Cidade1.setEnabled(false);
+        Cep.setEnabled(false);
+        Cep1.setEnabled(false);
+        Pais.setEnabled(false);
+        Pais1.setEnabled(false);
+        Estado.setEnabled(false);
+        Estado1.setEnabled(false);
+        Complemento.setEnabled(false);
+        Complemento1.setEnabled(false);
+        MultiGuiasNivel1.setEnabled(false);
+        MultiGuiasNivel2.setEnabled(false);
+        BtnCadastraCliente.setEnabled(false);
+        BtnBuscarCliente.setEnabled(false);
+        BtnCadastraFuncionario.setEnabled(false);
+        BtnBuscarFuncionario.setEnabled(false);
+        NumSuite.setEnabled(false);
+        TipoSuite.setEnabled(false);
+        CapacidadePessoasSlider.setEnabled(false);
+        ValorDiaria.setEnabled(false);
+        BtnCadastraQuarto.setEnabled(false);
+        BtnAnexarFoto.setEnabled(false);
+        TxtDescricaoSuite.setEnabled(false);
+        Login.setText("");
+        Password.setText("");
+    }//GEN-LAST:event_BtnBloquearActionPerformed
 
     /**
      * @param args the command line arguments
@@ -882,43 +1088,58 @@ public class HotelModerno extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JTextField Bairro;
     public javax.swing.JTextField Bairro1;
+    public javax.swing.JButton BtnAnexarFoto;
+    public javax.swing.JButton BtnAutorizar;
+    public javax.swing.JButton BtnBloquear;
     public javax.swing.JButton BtnBuscarCliente;
-    public javax.swing.JButton BtnBuscarCliente1;
+    public javax.swing.JButton BtnBuscarFuncionario;
     public javax.swing.JButton BtnCadastraCliente;
-    public javax.swing.JButton BtnCadastraCliente1;
+    public javax.swing.JButton BtnCadastraFuncionario;
+    public javax.swing.JButton BtnCadastraQuarto;
+    public javax.swing.JTextField CTPS;
+    public javax.swing.JSlider CapacidadePessoasSlider;
+    public javax.swing.JTextField Celular;
+    public javax.swing.JTextField Celular1;
+    public javax.swing.JTextField Cep;
+    public javax.swing.JTextField Cep1;
     public javax.swing.JTextField Cidade;
     public javax.swing.JTextField Cidade1;
     public javax.swing.JTextArea Complemento;
     public javax.swing.JTextArea Complemento1;
+    public javax.swing.JTextField Cpf;
+    public javax.swing.JTextField Cpf1;
+    public javax.swing.JTextField DataContratacao1;
+    public javax.swing.JTextField DataNascimento;
+    public javax.swing.JTextField DataNascimento1;
+    public javax.swing.JTextField Email;
+    public javax.swing.JTextField Email1;
     public javax.swing.JTextField Estado;
     public javax.swing.JTextField Estado1;
+    public javax.swing.JTextField Fone;
+    public javax.swing.JTextField Fone1;
     public javax.swing.JPanel GuiaMeuHotel;
     public javax.swing.JPanel GuiaReservas;
+    public javax.swing.JTextField Login;
     public javax.swing.JTextField Logradouro;
     public javax.swing.JTextField Logradouro1;
     public javax.swing.JTabbedPane MultiGuiasNivel1;
+    public javax.swing.JTabbedPane MultiGuiasNivel2;
+    public javax.swing.JTextField Nacionalidade;
+    public javax.swing.JTextField Nome;
+    public javax.swing.JTextField Nome1;
+    public javax.swing.JTextField NumSuite;
     public javax.swing.JTextField Numero;
     public javax.swing.JTextField Numero1;
     public javax.swing.JTextField Pais;
     public javax.swing.JTextField Pais1;
+    public javax.swing.JTextField Passaporte;
+    public javax.swing.JPasswordField Password;
+    public javax.swing.JTextField Rg;
+    public javax.swing.JTextField Rg1;
+    public javax.swing.JComboBox<String> TipoSuite;
+    public javax.swing.JTextArea TxtDescricaoSuite;
+    public javax.swing.JTextField ValorDiaria;
     public java.awt.Canvas canvas1;
-    public javax.swing.JSlider capacidadePessoasSlider;
-    public javax.swing.JTextField celular;
-    public javax.swing.JTextField celular1;
-    public javax.swing.JTextField cpf;
-    public javax.swing.JTextField cpf1;
-    public javax.swing.JTextField dataNascimento;
-    public javax.swing.JTextField dataNascimento1;
-    public javax.swing.JTextField email;
-    public javax.swing.JTextField email1;
-    public javax.swing.JTextField fone;
-    public javax.swing.JTextField fone1;
-    public javax.swing.JTextField formCEP;
-    public javax.swing.JTextField formCEP1;
-    public javax.swing.JButton jButton1;
-    public javax.swing.JButton jButton2;
-    public javax.swing.JButton jButton3;
-    public javax.swing.JComboBox<String> jComboBox1;
     public javax.swing.JLabel jLabel1;
     public javax.swing.JLabel jLabel10;
     public javax.swing.JLabel jLabel11;
@@ -969,7 +1190,6 @@ public class HotelModerno extends javax.swing.JFrame {
     public javax.swing.JPanel jPanel3;
     public javax.swing.JPanel jPanel4;
     public javax.swing.JPanel jPanel5;
-    public javax.swing.JPasswordField jPasswordField1;
     public javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JScrollPane jScrollPane3;
     public javax.swing.JScrollPane jScrollPane4;
@@ -977,20 +1197,7 @@ public class HotelModerno extends javax.swing.JFrame {
     public javax.swing.JSpinner jSpinner2;
     public javax.swing.JSpinner jSpinner3;
     public javax.swing.JSpinner jSpinner4;
-    public javax.swing.JTabbedPane jTabbedPane1;
-    public javax.swing.JTextArea jTextArea1;
-    public javax.swing.JTextField jTextField1;
-    public javax.swing.JTextField jTextField3;
-    public javax.swing.JTextField jTextField4;
     public javax.swing.JTextField jTextField6;
-    public javax.swing.JTextField nacionalidade;
-    public javax.swing.JTextField nacionalidade1;
-    public javax.swing.JTextField nome;
-    public javax.swing.JTextField nome1;
-    public javax.swing.JTextField passaporte;
-    public javax.swing.JTextField passaporte1;
-    public javax.swing.JTextField rg;
-    public javax.swing.JTextField rg1;
     // End of variables declaration//GEN-END:variables
     
 

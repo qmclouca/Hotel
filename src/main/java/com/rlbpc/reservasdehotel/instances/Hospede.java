@@ -7,13 +7,14 @@ package com.rlbpc.reservasdehotel.instances;
 import java.io.Serializable;
 import java.util.Objects;
 import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  *
  * @author Rodolfo Bortoluzzi
  */
 @Entity
+@Table
 public class Hospede extends Pessoa implements Serializable{
     private static final long serialVersionUID = 1L;
     Integer idHospede;

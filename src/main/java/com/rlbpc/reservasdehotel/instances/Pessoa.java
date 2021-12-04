@@ -7,6 +7,8 @@ package com.rlbpc.reservasdehotel.instances;
 import java.io.Serializable;
 import java.util.Objects;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
@@ -14,9 +16,9 @@ import javax.persistence.Id;
  * @author Rodolfo Bortoluzzi
  */
 @Entity
-public class Pessoa implements Serializable{
+public class Pessoa implements Serializable, Comparable<Pessoa>{
     private static final long serialVersionUID = 1L;
-        @Id
+        @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
         Integer idPessoa;
         String nome;
         String cpf;
@@ -188,6 +190,11 @@ public class Pessoa implements Serializable{
             return false;
         }
         return true;
+    }
+
+    @Override
+    public int compareTo(Pessoa o) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     
