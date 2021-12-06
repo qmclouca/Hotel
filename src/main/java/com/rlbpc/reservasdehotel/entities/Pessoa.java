@@ -2,58 +2,57 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.rlbpc.reservasdehotel.instances;
+package com.rlbpc.reservasdehotel.entities;
 
 import java.io.Serializable;
 import java.util.Objects;
 import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 /**
  *
  * @author Rodolfo Bortoluzzi
  */
 @Entity
-@Table
-public class Hospede extends Pessoa implements Serializable{
+public class Pessoa implements Serializable, Comparable<Pessoa>{
     private static final long serialVersionUID = 1L;
-    Integer idHospede;
-    String procedencia;
-    String metodoDePagamento;
-
-    public Hospede(){
+        @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+        Integer idPessoa;
+        String nome;
+        String cpf;
+        String rg;
+        String fone;
+        String celular;
+        String email;
+        Integer codEndereco;
+        String dataNascimento;
+        String sexo;
+        Integer idade;
+        String nacionalidade;
+        String passaporte;
+        String observacoes;
+        
+    public Pessoa(){
         
     }
-    public Hospede(Integer idHospede, String procedencia, String metodoDePagamento, Integer idPessoa, String nome, String cpf, String rg, String fone, String celular, String email, Integer codEndereco, String dataNascimento, String sexo, Integer idade, String nacionalidade, String passaporte, String observacoes) {
-        super(idPessoa, nome, cpf, rg, fone, celular, email, codEndereco, dataNascimento, sexo, idade, nacionalidade, passaporte, observacoes);
-        this.idHospede = idHospede;
-        this.procedencia = procedencia;
-        this.metodoDePagamento = metodoDePagamento;
-    }
-   
 
-    public Integer getIdHospede() {
-        return idHospede;
-    }
-
-    public void setIdHospede(Integer idHospede) {
-        this.idHospede = idHospede;
-    }
-
-    public String getProcedencia() {
-        return procedencia;
-    }
-
-    public void setProcedencia(String procedencia) {
-        this.procedencia = procedencia;
-    }
-
-    public String getMetodoDePagamento() {
-        return metodoDePagamento;
-    }
-
-    public void setMetodoDePagamento(String metodoDePagamento) {
-        this.metodoDePagamento = metodoDePagamento;
+    public Pessoa(Integer idPessoa, String nome, String cpf, String rg, String fone, String celular, String email, Integer codEndereco, String dataNascimento, String sexo, Integer idade, String nacionalidade, String passaporte, String observacoes) {
+        this.idPessoa = idPessoa;
+        this.nome = nome;
+        this.cpf = cpf;
+        this.rg = rg;
+        this.fone = fone;
+        this.celular = celular;
+        this.email = email;
+        this.codEndereco = codEndereco;
+        this.dataNascimento = dataNascimento;
+        this.sexo = sexo;
+        this.idade = idade;
+        this.nacionalidade = nacionalidade;
+        this.passaporte = passaporte;
+        this.observacoes = observacoes;
     }
 
     public Integer getIdPessoa() {
@@ -170,8 +169,8 @@ public class Hospede extends Pessoa implements Serializable{
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 67 * hash + Objects.hashCode(this.idHospede);
+        int hash = 7;
+        hash = 59 * hash + Objects.hashCode(this.idPessoa);
         return hash;
     }
 
@@ -186,12 +185,19 @@ public class Hospede extends Pessoa implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Hospede other = (Hospede) obj;
-        if (!Objects.equals(this.idHospede, other.idHospede)) {
+        final Pessoa other = (Pessoa) obj;
+        if (!Objects.equals(this.idPessoa, other.idPessoa)) {
             return false;
         }
         return true;
     }
 
+    @Override
+    public int compareTo(Pessoa o) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     
+    
+        
 }

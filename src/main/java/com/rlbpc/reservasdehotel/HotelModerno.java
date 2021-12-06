@@ -5,26 +5,29 @@
 package com.rlbpc.reservasdehotel;
 
 import java.sql.*;
-import com.rlbpc.reservasdehotel.instances.Apartamento;
-import com.rlbpc.reservasdehotel.instances.Endereco;
-import com.rlbpc.reservasdehotel.instances.Hospede;
-import com.rlbpc.reservasdehotel.instances.Reserva;
+import com.rlbpc.reservasdehotel.entities.Apartamento;
+import com.rlbpc.reservasdehotel.entities.Endereco;
+import com.rlbpc.reservasdehotel.entities.Hospede;
+import com.rlbpc.reservasdehotel.entities.HospedeList;
+import com.rlbpc.reservasdehotel.entities.Reserva;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 
 /**
  *
  * @author Rodolfo Bortoluzzi
  */
-public class HotelModerno extends javax.swing.JFrame {
-    
+public class HotelModerno extends javax.swing.JFrame{
     public Hospede hospede = new Hospede();
     public Endereco endereco = new Endereco();
     public Reserva reserva = new Reserva();
-    public Apartamento apartamento = new Apartamento();
+    public Apartamento apartamento = new Apartamento();  
     
     public HotelModerno() {
-        initComponents();
         
-       
+        initComponents();    
     }
 
     /**
@@ -912,7 +915,15 @@ public class HotelModerno extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnCadastraClienteActionPerformed
 
     private void BtnBuscarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBuscarClienteActionPerformed
-        // TODO add your handling code here:
+        hospede.setNome(Nome.toString());
+        hospede.setCpf(Cpf.toString());
+        try {
+            Class.forName("org.h2.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:h2:mem:testdb","sa","");
+            Statement stmt = conn.createStatement();
+        } catch (ClassNotFoundException | SQLException ex) {
+            Logger.getLogger(HotelModerno.class.getName()).log(Level.SEVERE, null, ex);
+        }        
     }//GEN-LAST:event_BtnBuscarClienteActionPerformed
 
     private void NumeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumeroActionPerformed
@@ -1051,38 +1062,14 @@ public class HotelModerno extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+    public static void main(String args[]) throws SQLException {       
+       
         
-            try {
-                for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                    if ("Nimbus".equals(info.getName())) {
-                        javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                        break;
-                    }
-                }
-            } catch (ClassNotFoundException ex) {
-                java.util.logging.Logger.getLogger(HotelModerno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-            } catch (InstantiationException ex) {
-                java.util.logging.Logger.getLogger(HotelModerno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-            } catch (IllegalAccessException ex) {
-                java.util.logging.Logger.getLogger(HotelModerno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-            } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-                java.util.logging.Logger.getLogger(HotelModerno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new HotelModerno().setVisible(true);
             }
-            //</editor-fold>
-
-            /* Create and display the form */
-            java.awt.EventQueue.invokeLater(new Runnable() {
-                public void run() {
-                    new HotelModerno().setVisible(true);
-                }
-            });
-        
+        });        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
