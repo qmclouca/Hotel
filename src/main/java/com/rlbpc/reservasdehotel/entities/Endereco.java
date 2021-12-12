@@ -6,19 +6,28 @@ package com.rlbpc.reservasdehotel.entities;
 
 import java.io.Serializable;
 import java.util.Objects;
-import javax.persistence.Entity;
+//import javax.persistence.Entity;
 import javax.persistence.Id;
 
 /**
  *
  * @author Rodolfo Bortoluzzi
  */
-@Entity
+//@Entity
 public class Endereco implements Serializable{
     private static final long serialVersionUID = 1L;
     @Id
     Integer idEndereco;
     String logradouro;
+    String numero;
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
     String CEP;
     String bairro;
     String estado;

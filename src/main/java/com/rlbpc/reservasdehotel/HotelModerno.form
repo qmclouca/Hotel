@@ -41,9 +41,9 @@
                   <Component id="Password" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="BtnAutorizar" min="-2" max="-2" attributes="0"/>
+              <Component id="BtnAutorizar" min="-2" pref="110" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="BtnBloquear" min="-2" pref="84" max="-2" attributes="0"/>
+              <Component id="BtnBloquear" min="-2" pref="112" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -64,8 +64,8 @@
                           <Component id="Password" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Component id="BtnAutorizar" max="32767" attributes="0"/>
-                  <Component id="BtnBloquear" max="32767" attributes="0"/>
+                  <Component id="BtnAutorizar" alignment="0" max="32767" attributes="0"/>
+                  <Component id="BtnBloquear" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="MultiGuiasNivel1" max="32767" attributes="0"/>
@@ -136,7 +136,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jPanel3" min="-2" pref="471" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="96" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="129" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -199,7 +199,7 @@
                                           <Component id="Email1" alignment="0" max="32767" attributes="0"/>
                                           <Component id="DataNascimento1" alignment="0" max="32767" attributes="0"/>
                                           <Component id="DataContratacao1" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="CTPS" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="Ctps" alignment="0" max="32767" attributes="0"/>
                                           <Component id="Rg1" alignment="0" max="32767" attributes="0"/>
                                           <Component id="Cpf1" alignment="0" max="32767" attributes="0"/>
                                           <Component id="Nome1" alignment="0" max="32767" attributes="0"/>
@@ -231,7 +231,7 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel29" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="CTPS" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Ctps" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -374,7 +374,7 @@
                             <Property name="enabled" type="boolean" value="false"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="CTPS">
+                        <Component class="javax.swing.JTextField" name="Ctps">
                           <Properties>
                             <Property name="enabled" type="boolean" value="false"/>
                           </Properties>
@@ -942,7 +942,7 @@
                                   </Group>
                                   <Component id="jLabel25" alignment="0" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="35" max="32767" attributes="0"/>
+                              <EmptySpace pref="65" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1132,7 +1132,7 @@
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" attributes="0">
                               <Component id="jTextField6" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="137" max="32767" attributes="0"/>
+                              <EmptySpace pref="148" max="32767" attributes="0"/>
                               <Component id="jLabel46" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
@@ -1141,19 +1141,16 @@
                           </Group>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="jSpinner1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jSpinner2" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="jSpinner3" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jSpinner4" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jSpinner1" pref="48" max="32767" attributes="0"/>
+                          <Component id="jSpinner3" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="143" max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jSpinner2" pref="48" max="32767" attributes="0"/>
+                          <Component id="jSpinner4" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="114" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>

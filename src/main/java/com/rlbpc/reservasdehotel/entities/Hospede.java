@@ -30,6 +30,11 @@ public class Hospede extends Pessoa implements Serializable{
         this.procedencia = procedencia;
         this.metodoDePagamento = metodoDePagamento;
     }
+
+    @Override
+    public String toString() {
+        return "Hospede{" + "idHospede=" + idHospede + ", procedencia=" + procedencia + ", metodoDePagamento=" + metodoDePagamento + '}';
+    }
    
 
     public Integer getIdHospede() {

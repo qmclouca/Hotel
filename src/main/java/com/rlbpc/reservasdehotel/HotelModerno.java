@@ -7,26 +7,82 @@ package com.rlbpc.reservasdehotel;
 import java.sql.*;
 import com.rlbpc.reservasdehotel.entities.Apartamento;
 import com.rlbpc.reservasdehotel.entities.Endereco;
+import com.rlbpc.reservasdehotel.entities.Funcionario;
 import com.rlbpc.reservasdehotel.entities.Hospede;
 import com.rlbpc.reservasdehotel.entities.HospedeList;
 import com.rlbpc.reservasdehotel.entities.Reserva;
+import static java.awt.image.ImageObserver.HEIGHT;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-
+import javax.swing.JOptionPane;
 /**
  *
  * @author Rodolfo Bortoluzzi
  */
+
+
 public class HotelModerno extends javax.swing.JFrame{
+    List<Funcionario> listaFuncionario = new ArrayList<Funcionario>();
     public Hospede hospede = new Hospede();
     public Endereco endereco = new Endereco();
     public Reserva reserva = new Reserva();
-    public Apartamento apartamento = new Apartamento();  
+    public Apartamento apartamento = new Apartamento();
+   
     
-    public HotelModerno() {
-        
+    
+    //public static String dbdriver = "org.h2.Driver";
+    //public static String dburl = "jdbc:h2:mem:testdb";
+    //public static String user = "sa";
+    //public static String pass = "";
+    //Connection conn = null;
+    //Statement stmt = null;
+    
+    /*
+    public Statement DataBank(String dbdriver, String dburl, String user, String pass){
+        try {
+            Class.forName(dbdriver);
+            conn = DriverManager.getConnection(dbdriver,user,pass);
+            stmt = conn.createStatement();
+            return stmt;
+        } catch (ClassNotFoundException | SQLException ex) {
+            Logger.getLogger(HotelModerno.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Ocorreu um problema ao abrir o banco de dados.");
+        }
+        return stmt;
+    }  
+    */ 
+    
+    public void salvaFuncionario(String fileName, List<Funcionario> list) throws Exception {
+        try {    
+            File file = new File(fileName);
+            if (!file.exists()){
+                file.createNewFile();
+            }
+            FileWriter fw = new FileWriter(file,true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            	for (int i=0; listaFuncionario!=null && i<listaFuncionario.size(); i++){
+                    bw.write(listaFuncionario.get(i).toString());
+                    bw.write("\n");
+                   
+                }
+                bw.close();
+                fw.close();                
+	    } catch (Exception e) {
+		System.out.println("ERRO: " + e.getMessage());
+		throw e;
+	    } 
+    }
+   
+    public HotelModerno() {        
         initComponents();    
     }
 
@@ -56,7 +112,7 @@ public class HotelModerno extends javax.swing.JFrame{
         jLabel33 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
         Rg1 = new javax.swing.JTextField();
-        CTPS = new javax.swing.JTextField();
+        Ctps = new javax.swing.JTextField();
         DataContratacao1 = new javax.swing.JTextField();
         DataNascimento1 = new javax.swing.JTextField();
         Email1 = new javax.swing.JTextField();
@@ -187,7 +243,7 @@ public class HotelModerno extends javax.swing.JFrame{
 
         Rg1.setEnabled(false);
 
-        CTPS.setEnabled(false);
+        Ctps.setEnabled(false);
 
         DataContratacao1.setEnabled(false);
 
@@ -298,7 +354,7 @@ public class HotelModerno extends javax.swing.JFrame{
                         .addComponent(Email1, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(DataNascimento1, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(DataContratacao1, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(CTPS, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(Ctps, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(Rg1, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(Cpf1, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(Nome1, javax.swing.GroupLayout.Alignment.LEADING)
@@ -323,7 +379,7 @@ public class HotelModerno extends javax.swing.JFrame{
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel29)
-                    .addComponent(CTPS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Ctps, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel30)
@@ -392,7 +448,7 @@ public class HotelModerno extends javax.swing.JFrame{
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 471, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 96, Short.MAX_VALUE))
+                .addGap(0, 129, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -712,7 +768,7 @@ public class HotelModerno extends javax.swing.JFrame{
                         .addGap(18, 18, 18)
                         .addComponent(BtnCadastraQuarto, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -789,22 +845,20 @@ public class HotelModerno extends javax.swing.JFrame{
                 .addGroup(GuiaReservasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(GuiaReservasLayout.createSequentialGroup()
                         .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 137, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 148, Short.MAX_VALUE)
                         .addComponent(jLabel46))
                     .addGroup(GuiaReservasLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jLabel45)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(GuiaReservasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(GuiaReservasLayout.createSequentialGroup()
-                        .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(GuiaReservasLayout.createSequentialGroup()
-                        .addComponent(jSpinner3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jSpinner4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(143, Short.MAX_VALUE))
+                .addGroup(GuiaReservasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jSpinner1, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
+                    .addComponent(jSpinner3))
+                .addGap(18, 18, 18)
+                .addGroup(GuiaReservasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jSpinner2, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
+                    .addComponent(jSpinner4))
+                .addContainerGap(114, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, GuiaReservasLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(canvas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -866,9 +920,9 @@ public class HotelModerno extends javax.swing.JFrame{
                     .addComponent(Login, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
                     .addComponent(Password))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BtnAutorizar)
+                .addComponent(BtnAutorizar, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BtnBloquear, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BtnBloquear, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -915,15 +969,11 @@ public class HotelModerno extends javax.swing.JFrame{
     }//GEN-LAST:event_BtnCadastraClienteActionPerformed
 
     private void BtnBuscarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBuscarClienteActionPerformed
+        //Statement dbstmt = null; 
         hospede.setNome(Nome.toString());
         hospede.setCpf(Cpf.toString());
-        try {
-            Class.forName("org.h2.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:h2:mem:testdb","sa","");
-            Statement stmt = conn.createStatement();
-        } catch (ClassNotFoundException | SQLException ex) {
-            Logger.getLogger(HotelModerno.class.getName()).log(Level.SEVERE, null, ex);
-        }        
+        //dbstmt = DataBank(dbdriver, dburl, user, pass);
+        
     }//GEN-LAST:event_BtnBuscarClienteActionPerformed
 
     private void NumeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumeroActionPerformed
@@ -939,19 +989,80 @@ public class HotelModerno extends javax.swing.JFrame{
     }//GEN-LAST:event_CapacidadePessoasSliderStateChanged
 
     private void BtnCadastraFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCadastraFuncionarioActionPerformed
-        // TODO add your handling code here:
+        Path arqFuncionarios = Paths.get("F:\\Rodolfo\\Dados I\\ReservasDeHotel\\src\\main\\java\\Persistencias\\funcionarios.txt");
+        Funcionario funcionario = new Funcionario();
+        funcionario.setNome(Nome1.getText());
+        funcionario.setCpf(Cpf1.getText());
+        funcionario.setRg(Rg1.getText());
+        funcionario.setCtps(Ctps.getText());
+        funcionario.setDataContratacao(DataContratacao1.getText());
+        funcionario.setDataNascimento(DataNascimento1.getText());
+        funcionario.setEmail(Email1.getText());
+        funcionario.setFone(Fone1.getText());
+        funcionario.setCelular(Celular1.getText());
+        funcionario.setLogradouro(Logradouro1.getText());
+        funcionario.setNumero(Numero1.getText());
+        funcionario.setBairro(Bairro1.getText());
+        funcionario.setCidade(Cidade1.getText());
+        funcionario.setCEP(Cep1.getText());
+        funcionario.setPais(Pais1.getText());
+        funcionario.setEstado(Estado1.getText());
+        funcionario.setComplemento(Complemento1.getText());
+        listaFuncionario.add(new Funcionario(
+                funcionario.getIdPessoa(),
+                funcionario.getNome(),
+                funcionario.getCpf(),
+                funcionario.getRg(),
+                funcionario.getCtps(),
+                funcionario.getDataContratacao(),
+                funcionario.getDataNascimento(),
+                funcionario.getEmail(),
+                funcionario.getFone(),
+                funcionario.getCelular(),
+                funcionario.getLogradouro(),
+                funcionario.getNumero(),
+                funcionario.getBairro(),
+                funcionario.getCidade(),
+                funcionario.getCEP(),
+                funcionario.getPais(),
+                funcionario.getEstado(),
+                funcionario.getComplemento()));
+        //for (Funcionario funcionario:listaFuncionario) System.out.println(funcionario);
+        try {
+            System.out.println(arqFuncionarios.toString());
+            System.out.println(listaFuncionario);
+            salvaFuncionario(arqFuncionarios.toString(), listaFuncionario);
+        } catch (Exception ex) {
+            System.out.println("modifique o caminho do arquivo Prontuarios.txt e crie o mesmo antes de rodar o programa." );
+            Logger.getLogger(HotelModerno.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        Nome1.setText("");
+        Cpf1.setText("");
+        Rg1.setText("");
+        Ctps.setText("");
+        DataContratacao1.setText("");
+        DataNascimento1.setText("");
+        Email1.setText("");
+        Fone1.setText("");
+        Celular1.setText("");
+        Logradouro1.setText("");
+        Numero1.setText("");
+        Bairro1.setText("");
+        Cidade1.setText("");
+        Cep1.setText("");
+        Pais1.setText("");
+        Estado1.setText("");
+        Complemento1.setText("");
+        Logger.getLogger(HotelModerno.class.getName()).log(Level.INFO, null, "Funcionário cadastrado com sucesso.");
+        JOptionPane.showMessageDialog(null, "O funcionário foi cadastrado com sucesso." , "Cadastramento", HEIGHT);
     }//GEN-LAST:event_BtnCadastraFuncionarioActionPerformed
-
-    private void BtnBuscarFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBuscarFuncionarioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BtnBuscarFuncionarioActionPerformed
 
     private void Numero1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Numero1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Numero1ActionPerformed
 
     private void BtnAutorizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAutorizarActionPerformed
-        if (Login.getText().toString().equals("Rodolfo")){
+        if (Login.getText().equals("Rodolfo")){
             String strPass = new String(Password.getPassword()).trim();
             if (strPass.equals("123456")){
                 Nome.setEnabled(true);
@@ -961,7 +1072,7 @@ public class HotelModerno extends javax.swing.JFrame{
                 Rg.setEnabled(true);
                 Rg1.setEnabled((true));
                 Passaporte.setEnabled(true);
-                CTPS.setEnabled(true);
+                Ctps.setEnabled(true);
                 Nacionalidade.setEnabled(true);
                 DataNascimento.setEnabled(true);
                 DataNascimento1.setEnabled(true);
@@ -1015,7 +1126,7 @@ public class HotelModerno extends javax.swing.JFrame{
         Rg.setEnabled(false);
         Rg1.setEnabled((false));
         Passaporte.setEnabled(false);
-        CTPS.setEnabled(false);
+        Ctps.setEnabled(false);
         Nacionalidade.setEnabled(false);
         DataNascimento.setEnabled(false);
         DataNascimento1.setEnabled(false);
@@ -1059,12 +1170,13 @@ public class HotelModerno extends javax.swing.JFrame{
         Password.setText("");
     }//GEN-LAST:event_BtnBloquearActionPerformed
 
+    private void BtnBuscarFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBuscarFuncionarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnBuscarFuncionarioActionPerformed
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) throws SQLException {       
-       
-        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new HotelModerno().setVisible(true);
@@ -1083,7 +1195,6 @@ public class HotelModerno extends javax.swing.JFrame{
     public javax.swing.JButton BtnCadastraCliente;
     public javax.swing.JButton BtnCadastraFuncionario;
     public javax.swing.JButton BtnCadastraQuarto;
-    public javax.swing.JTextField CTPS;
     public javax.swing.JSlider CapacidadePessoasSlider;
     public javax.swing.JTextField Celular;
     public javax.swing.JTextField Celular1;
@@ -1095,6 +1206,7 @@ public class HotelModerno extends javax.swing.JFrame{
     public javax.swing.JTextArea Complemento1;
     public javax.swing.JTextField Cpf;
     public javax.swing.JTextField Cpf1;
+    public javax.swing.JTextField Ctps;
     public javax.swing.JTextField DataContratacao1;
     public javax.swing.JTextField DataNascimento;
     public javax.swing.JTextField DataNascimento1;

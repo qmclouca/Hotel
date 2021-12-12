@@ -11,19 +11,104 @@ import java.io.Serializable;
  * @author Rodolfo Bortoluzzi
  */
 public class Funcionario extends Pessoa implements Serializable {
+    private static final long serialVersionUID = 1L;
     public String Ctps;
     public String DataContratacao;
+    
     
     public Funcionario(){
         
     }
-
-    public Funcionario(String Ctps, String DataContratacao, Integer idPessoa, String nome, String cpf, String rg, String fone, String celular, String email, Integer codEndereco, String dataNascimento, String sexo, Integer idade, String nacionalidade, String passaporte, String observacoes) {
-        super(idPessoa, nome, cpf, rg, fone, celular, email, codEndereco, dataNascimento, sexo, idade, nacionalidade, passaporte, observacoes);
-        this.Ctps = Ctps;
-        this.DataContratacao = DataContratacao;
+    
+    public Funcionario(String ctps, String dataContratacao, Integer idPessoa, String nome, String cpf, String rg, String fone, String celular, String email, String logradouro, String numero, String bairro, String cidade, String cep, String pais, String estado, Integer codEndereco, String dataNascimento, String sexo, Integer idade, String nacionalidade, String passaporte, String complemento) {
+        super(idPessoa, nome, cpf, rg, fone, celular, email, codEndereco, dataNascimento, sexo, idade, nacionalidade, passaporte, complemento);
+        this.Ctps = ctps;
+        this.DataContratacao = dataContratacao;
+        this.idPessoa = idPessoa;
+        this.nome = nome;
+        this.cpf = cpf;
+        this.rg = rg;
+        this.fone = fone;
+        this.celular = celular;
+        this.email = email;
+        this.codEndereco = codEndereco;
+        this.dataNascimento = dataNascimento;
+        this.sexo = sexo;
+        this.idade = idade;
+        this.nacionalidade = nacionalidade;
+        this.passaporte = passaporte;
+        this.observacoes = complemento;
+        this.logradouro = logradouro;
+        this.numero = numero;
+        this.bairro = bairro;
+        this.cidade = cidade;
+        this.CEP = cep;
+        this.pais = pais;
+        this.estado = estado;
+    }
+    
+    public Funcionario(
+            Integer idPessoa,
+            String nome, 
+            String cpf, 
+            String rg, 
+            String ctps, 
+            String dataContratacao, 
+            String dataNascimento, 
+            String email, 
+            String fone, 
+            String celular, 
+            String logradouro, 
+            String numero, 
+            String bairro, 
+            String cidade, 
+            String cep, 
+            String pais, 
+            String estado, 
+            String complemento){
+        this.idPessoa = idPessoa;
+        this.nome = nome;
+        this.cpf = cpf;
+        this.rg = rg;
+        this.Ctps = ctps;
+        this.DataContratacao = dataContratacao;
+        this.dataNascimento = dataNascimento;
+        this.email = email;
+        this.fone = fone;
+        this.celular = celular;
+        this.logradouro = logradouro;
+        this.numero = numero;
+        this.bairro = bairro;
+        this.cidade = cidade;
+        this.CEP = cep;
+        this.pais = pais;
+        this.estado = estado;
+        this.complemento = complemento;        
     }
 
+
+    @Override
+    public String toString() {
+        return "Funcionario{"
+                + "Id = " + idPessoa
+                + ", Nome = " + nome
+                + ", Ctps = " + Ctps 
+                + ", DataContratacao = " + DataContratacao 
+                + ", CPF = " + cpf
+                + ", RG = " + rg
+                + ", Telefone = " + fone
+                + ", Celular = " + celular
+                + ", Email = " + email
+                + ", codEndereco = " + codEndereco
+                + ", dataNascimento = " + dataNascimento
+                + ", Sexo = " + sexo
+                + ", Idade = " + idade
+                + ", Nacionalidade = " + nacionalidade
+                + ", Observacoes = " + observacoes
+                + '}';
+    }
+
+    
     public String getCtps() {
         return Ctps;
     }

@@ -6,19 +6,19 @@ package com.rlbpc.reservasdehotel.entities;
 
 import java.io.Serializable;
 import java.util.Objects;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+//import javax.persistence.Entity;
+//import javax.persistence.GeneratedValue;
+//import javax.persistence.GenerationType;
+//import javax.persistence.Id;
 
 /**
  *
  * @author Rodolfo Bortoluzzi
  */
-@Entity
-public class Pessoa implements Serializable, Comparable<Pessoa>{
+//@Entity
+public class Pessoa extends Endereco implements Serializable, Comparable<Pessoa>{
     private static final long serialVersionUID = 1L;
-        @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+        //@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
         Integer idPessoa;
         String nome;
         String cpf;
@@ -38,6 +38,8 @@ public class Pessoa implements Serializable, Comparable<Pessoa>{
         
     }
 
+   
+
     public Pessoa(Integer idPessoa, String nome, String cpf, String rg, String fone, String celular, String email, Integer codEndereco, String dataNascimento, String sexo, Integer idade, String nacionalidade, String passaporte, String observacoes) {
         this.idPessoa = idPessoa;
         this.nome = nome;
@@ -53,6 +55,11 @@ public class Pessoa implements Serializable, Comparable<Pessoa>{
         this.nacionalidade = nacionalidade;
         this.passaporte = passaporte;
         this.observacoes = observacoes;
+    }
+    
+    @Override
+    public String toString() {
+        return "Pessoa{" + "idPessoa=" + idPessoa + ", nome=" + nome + ", cpf=" + cpf + ", rg=" + rg + ", fone=" + fone + ", celular=" + celular + ", email=" + email + ", codEndereco=" + codEndereco + ", dataNascimento=" + dataNascimento + ", sexo=" + sexo + ", idade=" + idade + ", nacionalidade=" + nacionalidade + ", passaporte=" + passaporte + ", observacoes=" + observacoes + '}';
     }
 
     public Integer getIdPessoa() {
@@ -165,6 +172,70 @@ public class Pessoa implements Serializable, Comparable<Pessoa>{
 
     public void setObservacoes(String observacoes) {
         this.observacoes = observacoes;
+    }
+    
+     public Integer getIdEndereco() {
+        return idEndereco;
+    }
+
+    public void setIdEndereco(Integer idEndereco) {
+        this.idEndereco = idEndereco;
+    }
+
+    public String getLogradouro() {
+        return logradouro;
+    }
+
+    public void setLogradouro(String logradouro) {
+        this.logradouro = logradouro;
+    }
+
+    public String getCEP() {
+        return CEP;
+    }
+
+    public void setCEP(String CEP) {
+        this.CEP = CEP;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public String getPais() {
+        return pais;
+    }
+
+    public void setPais(String pais) {
+        this.pais = pais;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
+    public String getComplemento() {
+        return complemento;
+    }
+
+    public void setComplemento(String complemento) {
+        this.complemento = complemento;
     }
 
     @Override
