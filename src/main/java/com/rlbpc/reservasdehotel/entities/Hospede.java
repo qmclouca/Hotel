@@ -24,7 +24,7 @@ public class Hospede extends Pessoa implements Serializable{
     public Hospede(){
         
     }
-    public Hospede(Integer idHospede, String procedencia, String metodoDePagamento, Integer idPessoa, String nome, String cpf, String rg, String fone, String celular, String email, Integer codEndereco, String dataNascimento, String sexo, Integer idade, String nacionalidade, String passaporte, String observacoes) {
+    public Hospede(Integer idHospede, String procedencia, String metodoDePagamento, Integer idPessoa, String nome, String cpf, String rg, String fone, String celular, String email, Integer codEndereco, String dataNascimento, String sexo, Integer idade, String nacionalidade, String passaporte, String observacoes, String logradouro, String numero, String bairro, String cidade, String cep, String pais, String estado, String complemento) {
         super(idPessoa, nome, cpf, rg, fone, celular, email, codEndereco, dataNascimento, sexo, idade, nacionalidade, passaporte, observacoes);
         this.idHospede = idHospede;
         this.procedencia = procedencia;
@@ -33,7 +33,33 @@ public class Hospede extends Pessoa implements Serializable{
 
     @Override
     public String toString() {
-        return "Hospede{" + "idHospede=" + idHospede + ", procedencia=" + procedencia + ", metodoDePagamento=" + metodoDePagamento + '}';
+        return "Hospede{"
+                + "IdHospede =" + idHospede
+                + ", Procedencia =" + procedencia
+                + ", MetodoDePagamento =" + metodoDePagamento
+                + ", IdPessoa = " + idPessoa
+                + ", Nome = " + nome
+                + ", CPF = " + cpf
+                + ", RG = " + rg
+                + ", Telefone = " + fone
+                + ", Celular = " + celular
+                + ", Email = " + email
+                + ", CodEndereco = " + codEndereco
+                + ", DataNascimento = " + dataNascimento
+                + ", Sexo = " + sexo
+                + ", Idade = " + idade
+                + ", Nacionalidade = " + nacionalidade
+                + ", Passaporte = " + passaporte
+                + ", Observacoes = " + observacoes
+                + ", Logradouro = " + logradouro
+                + ", Numero = " + numero
+                + ", Bairro = " + bairro
+                + ", Cidade = " + cidade
+                + ", CEP = " + CEP
+                + ", Pais = " + pais
+                + ", Estado = " + estado
+                + ", Complemento = " + complemento
+                + '}';
     }
    
 
