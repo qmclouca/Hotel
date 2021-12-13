@@ -1,0 +1,1 @@
+Apartamento{idApartamento=null, numeroApartamento=2, tipoApartamento=Simples, capacidadeApartamento=100, statusApartamento=null, agendaApartamento=null, valorDiaria=2000, descricaoApartamento=Inclua aqui a descrição e outras informações pertinentes sobre o quarto}

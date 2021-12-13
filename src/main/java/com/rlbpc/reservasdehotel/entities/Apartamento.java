@@ -6,37 +6,66 @@ package com.rlbpc.reservasdehotel.entities;
 
 import java.io.Serializable;
 import java.util.Objects;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
 /**
  * @author Rodolfo Bortoluzzi
  */
-@Entity
 public class Apartamento extends Agenda implements Serializable{
     private static final long serialVersionUID = 1L;
-    @Id    
     Integer idApartamento;
-    Integer numeroApartamento;
+    String numeroApartamento;
     String tipoApartamento;
+    String capacidadeApartamento;
     String statusApartamento;
     Agenda agendaApartamento;
-    Float valorDiaria;
+    String valorDiaria;
+    String descricaoApartamento;
 
     public Apartamento(){
         
     }
-    public Apartamento(Integer idApartamento, Integer numeroApartamento, String tipoApartamento, String statusApartamento, Agenda agendaApartamento, Float valorDiaria) {
+    public Apartamento(Integer idApartamento, String numeroApartamento, String tipoApartamento, String capacidadeApartamento, String statusApartamento, Agenda agendaApartamento, String valorDiaria, String descricaoApartamento) {
         this.idApartamento = idApartamento;
         this.numeroApartamento = numeroApartamento;
         this.tipoApartamento = tipoApartamento;
+        this.capacidadeApartamento = capacidadeApartamento;
         this.statusApartamento = statusApartamento;
         this.agendaApartamento = agendaApartamento;
         this.valorDiaria = valorDiaria;
+        this.descricaoApartamento = descricaoApartamento;
+    }
+
+    @Override
+    public String toString() {
+        return "Apartamento{" 
+                + "idApartamento=" + idApartamento 
+                + ", numeroApartamento=" + numeroApartamento 
+                + ", tipoApartamento=" + tipoApartamento 
+                + ", capacidadeApartamento=" + capacidadeApartamento 
+                + ", statusApartamento=" + statusApartamento 
+                + ", agendaApartamento=" + agendaApartamento 
+                + ", valorDiaria=" + valorDiaria 
+                + ", descricaoApartamento=" + descricaoApartamento 
+                + '}';
+    }
+
+    public String getDescricaoApartamento() {
+        return descricaoApartamento;
+    }
+
+    public void setDescricaoApartamento(String descricaoApartamento) {
+        this.descricaoApartamento = descricaoApartamento;
     }
 
     public Integer getIdApartamento() {
         return idApartamento;
+    }
+
+    public String getCapacidadeApartamento() {
+        return capacidadeApartamento;
+    }
+
+    public void setCapacidadeApartamento(String capacidadeApartamento) {
+        this.capacidadeApartamento = capacidadeApartamento;
     }
 
     @Override
@@ -72,11 +101,11 @@ public class Apartamento extends Agenda implements Serializable{
         this.idApartamento = idApartamento;
     }
 
-    public Integer getNumeroApartamento() {
+    public String getNumeroApartamento() {
         return numeroApartamento;
     }
 
-    public void setNumeroApartamento(Integer numeroApartamento) {
+    public void setNumeroApartamento(String numeroApartamento) {
         this.numeroApartamento = numeroApartamento;
     }
 
@@ -104,11 +133,11 @@ public class Apartamento extends Agenda implements Serializable{
         this.agendaApartamento = agendaApartamento;
     }
 
-    public Float getValorDiaria() {
+    public String getValorDiaria() {
         return valorDiaria;
     }
 
-    public void setValorDiaria(Float valorDiaria) {
+    public void setValorDiaria(String valorDiaria) {
         this.valorDiaria = valorDiaria;
     }
     
