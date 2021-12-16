@@ -1,20 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.rlbpc.reservasdehotel.entities;
-
 import java.io.Serializable;
 import java.util.Objects;
-import javax.persistence.Entity;
-import javax.persistence.Table;
-
 /**
  *
  * @author Rodolfo Bortoluzzi
  */
-@Entity
-@Table
 public class Hospede extends Pessoa implements Serializable{
     private static final long serialVersionUID = 1L;
     Integer idHospede;
@@ -24,8 +14,34 @@ public class Hospede extends Pessoa implements Serializable{
     public Hospede(){
         
     }
-    public Hospede(Integer idHospede, String procedencia, String metodoDePagamento, Integer idPessoa, String nome, String cpf, String rg, String fone, String celular, String email, Integer codEndereco, String dataNascimento, String sexo, Integer idade, String nacionalidade, String passaporte, String observacoes, String logradouro, String numero, String bairro, String cidade, String cep, String pais, String estado, String complemento) {
-        super(idPessoa, nome, cpf, rg, fone, celular, email, codEndereco, dataNascimento, sexo, idade, nacionalidade, passaporte, observacoes);
+    public Hospede(Integer idHospede, 
+            String procedencia, 
+            String metodoDePagamento, 
+            Integer idPessoa, 
+            String nome, 
+            String cpf, 
+            String rg, 
+            String fone, 
+            String celular, 
+            String email, 
+            Integer codEndereco, 
+            String dataNascimento, 
+            String sexo, 
+            Integer idade, 
+            String nacionalidade, 
+            String passaporte, 
+            String observacoes, 
+            String logradouro, 
+            String numero, 
+            String bairro, 
+            String cidade, 
+            String cep, 
+            String pais, 
+            String estado, 
+            String complemento) {
+        super(idPessoa, nome, cpf, rg, fone, celular, email, codEndereco, 
+                dataNascimento, sexo, idade, nacionalidade, passaporte, 
+                observacoes);
         this.idHospede = idHospede;
         this.procedencia = procedencia;
         this.metodoDePagamento = metodoDePagamento;

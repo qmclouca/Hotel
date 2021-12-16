@@ -1,14 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.rlbpc.reservasdehotel.entities;
-
 import java.io.Serializable;
 import java.util.Objects;
-//import javax.persistence.Entity;
-import javax.persistence.Id;
-
 /**
  *
  * @author Rodolfo Bortoluzzi
@@ -16,7 +8,6 @@ import javax.persistence.Id;
 //@Entity
 public class Endereco implements Serializable{
     private static final long serialVersionUID = 1L;
-    @Id
     Integer idEndereco;
     String logradouro;
     String numero;

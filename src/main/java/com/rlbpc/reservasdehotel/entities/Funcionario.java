@@ -1,11 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.rlbpc.reservasdehotel.entities;
-
 import java.io.Serializable;
-
 /**
  *
  * @author Rodolfo Bortoluzzi
@@ -14,14 +8,37 @@ public class Funcionario extends Pessoa implements Serializable {
     private static final long serialVersionUID = 1L;
     public String Ctps;
     public String DataContratacao;
-    
-    
+  
     public Funcionario(){
         
     }
     
-    public Funcionario(String ctps, String dataContratacao, Integer idPessoa, String nome, String cpf, String rg, String fone, String celular, String email, String logradouro, String numero, String bairro, String cidade, String cep, String pais, String estado, Integer codEndereco, String dataNascimento, String sexo, Integer idade, String nacionalidade, String passaporte, String complemento) {
-        super(idPessoa, nome, cpf, rg, fone, celular, email, codEndereco, dataNascimento, sexo, idade, nacionalidade, passaporte, complemento);
+    public Funcionario(String ctps, 
+            String dataContratacao, 
+            Integer idPessoa, 
+            String nome, 
+            String cpf, 
+            String rg, 
+            String fone, 
+            String celular, 
+            String email, 
+            String logradouro, 
+            String numero, 
+            String bairro, 
+            String cidade, 
+            String cep, 
+            String pais, 
+            String estado, 
+            Integer codEndereco, 
+            String dataNascimento, 
+            String sexo, 
+            Integer idade, 
+            String nacionalidade, 
+            String passaporte, 
+            String complemento) {
+        super(idPessoa, nome, cpf, rg, fone, celular, email, codEndereco, 
+                dataNascimento, sexo, idade, nacionalidade, passaporte, 
+                complemento);
         this.Ctps = ctps;
         this.DataContratacao = dataContratacao;
         this.idPessoa = idPessoa;

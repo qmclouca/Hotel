@@ -1,9 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.rlbpc.reservasdehotel.entities;
-
 import java.io.Serializable;
 import java.util.Objects;
 /**
@@ -23,7 +18,14 @@ public class Apartamento extends Agenda implements Serializable{
     public Apartamento(){
         
     }
-    public Apartamento(Integer idApartamento, String numeroApartamento, String tipoApartamento, String capacidadeApartamento, String statusApartamento, Agenda agendaApartamento, String valorDiaria, String descricaoApartamento) {
+    public Apartamento(Integer idApartamento,
+            String numeroApartamento,
+            String tipoApartamento,
+            String capacidadeApartamento,
+            String statusApartamento,
+            Agenda agendaApartamento,
+            String valorDiaria,
+            String descricaoApartamento) {
         this.idApartamento = idApartamento;
         this.numeroApartamento = numeroApartamento;
         this.tipoApartamento = tipoApartamento;
