@@ -225,7 +225,7 @@ public class HotelModerno extends javax.swing.JFrame{
         jLabel47 = new javax.swing.JLabel();
         jLabel48 = new javax.swing.JLabel();
         ValorTotal = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        BtnCadastrarReserva = new javax.swing.JButton();
         jLabel50 = new javax.swing.JLabel();
         jLabel51 = new javax.swing.JLabel();
         FormaPagamento = new javax.swing.JComboBox<>();
@@ -886,10 +886,10 @@ public class HotelModerno extends javax.swing.JFrame{
         ValorTotal.setText("0,00");
         ValorTotal.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jButton1.setText("Confirmar Reserva");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BtnCadastrarReserva.setText("Confirmar Reserva");
+        BtnCadastrarReserva.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BtnCadastrarReservaActionPerformed(evt);
             }
         });
 
@@ -1081,7 +1081,7 @@ public class HotelModerno extends javax.swing.JFrame{
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, GuiaReservasLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BtnCadastrarReserva, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         GuiaReservasLayout.setVerticalGroup(
@@ -1187,7 +1187,7 @@ public class HotelModerno extends javax.swing.JFrame{
                     .addComponent(jLabel48)
                     .addComponent(ValorTotal))
                 .addGap(49, 49, 49)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BtnCadastrarReserva, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(230, 230, 230))
         );
 
@@ -1570,9 +1570,9 @@ public class HotelModerno extends javax.swing.JFrame{
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void BtnCadastrarReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCadastrarReservaActionPerformed
+        
+    }//GEN-LAST:event_BtnCadastrarReservaActionPerformed
     /**
      * @param args the command line arguments
      */
@@ -1596,6 +1596,7 @@ public class HotelModerno extends javax.swing.JFrame{
     public javax.swing.JButton BtnCadastraCliente;
     public javax.swing.JButton BtnCadastraFuncionario;
     public javax.swing.JButton BtnCadastraQuarto;
+    public javax.swing.JButton BtnCadastrarReserva;
     public javax.swing.JTextField CapacidadeApartamento;
     public javax.swing.JTextField Celular;
     public javax.swing.JTextField Celular1;
@@ -1674,7 +1675,6 @@ public class HotelModerno extends javax.swing.JFrame{
     public javax.swing.JLabel ValorDiariaReserva;
     public javax.swing.JLabel ValorTotal;
     public java.awt.Canvas canvas1;
-    public javax.swing.JButton jButton1;
     public javax.swing.JButton jButton2;
     public javax.swing.JComboBox<String> jComboBox1;
     public javax.swing.JLabel jLabel1;
