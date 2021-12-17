@@ -20,8 +20,9 @@ public class Apartamento extends Agenda implements Serializable{
     Agenda agendaApartamento;
     String valorDiaria;
     String descricaoApartamento;
+    
 
-    public static List<Apartamento> lerArquivoApartamento(){
+    public static ArrayList<Apartamento> lerArquivoApartamento(){
         File dir = new File("F:\\Rodolfo\\Dados I\\ReservasDeHotel\\src\\main\\java\\Persistencias");
         File arq = new File(dir, "apartamentos.txt");
         ArrayList<Apartamento> apartamentos = new ArrayList<Apartamento>();
@@ -38,9 +39,9 @@ public class Apartamento extends Agenda implements Serializable{
             int posStatusApartamento = 0;
             int posAgendaApartamento = 0;
             int posValorDiaria = 0;
-            int posDescricaoApartamento = 0;
-            Apartamento ap = new Apartamento();
+            int posDescricaoApartamento = 0;            
             while ((linha = bufferLeitura.readLine()) != null){
+                Apartamento ap = new Apartamento();
                 String[] linhaDadosSeparada = {"","","","","","",""};
                 linhaDados = linha.substring(12, linha.length());
                 posNumeroApartamento = linhaDados.indexOf("numeroApartamento")+18;
@@ -65,13 +66,6 @@ public class Apartamento extends Agenda implements Serializable{
                 ap.setValorDiaria(linhaDadosSeparada[5]);
                 ap.setDescricaoApartamento(linhaDadosSeparada[6]);
                 apartamentos.add(ap);
-                posNumeroApartamento = 0;
-                posTipoApartamento = 0;
-                posCapacidadeApartamento = 0;
-                posStatusApartamento = 0;
-                posAgendaApartamento = 0;
-                posValorDiaria = 0;
-                posDescricaoApartamento = 0;        
                 idAP++; 
             }
             leitor.close();

@@ -1559,16 +1559,10 @@ public class HotelModerno extends javax.swing.JFrame{
                 BtnCadastrarReserva.setEnabled(true);
                 List<Apartamento> apartamentos = Apartamento.lerArquivoApartamento();
                 int nApartamentosCadastrados = apartamentos.size();
-                System.out.println(nApartamentosCadastrados);
                 String[] listaAps = new String[nApartamentosCadastrados];
-                int count = 0;
-                for (Apartamento apartamento : apartamentos){
-                    System.out.println(apartamento);
-                    listaAps[count] = apartamento.getNumeroApartamento();
-                    count++;
-                }
-                
-                
+                for (int count = 0; count<nApartamentosCadastrados; count++){
+                    listaAps[count] = apartamentos.get(count).getNumeroApartamento();
+                };                              
                 ApartamentoEscolhido.setModel(new DefaultComboBoxModel(listaAps));
             }
         }
