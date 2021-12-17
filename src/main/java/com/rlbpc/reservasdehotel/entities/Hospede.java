@@ -1,5 +1,10 @@
 package com.rlbpc.reservasdehotel.entities;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 /**
  *
@@ -14,6 +19,105 @@ public class Hospede extends Pessoa implements Serializable{
     public Hospede(){
         
     }
+    
+    public static ArrayList<Hospede> lerArquivoHospedes(){
+        File dir = new File("F:\\Rodolfo\\Dados I\\ReservasDeHotel\\src\\main\\java\\Persistencias");
+        File arq = new File(dir, "hospedes.txt");
+        ArrayList<Hospede> hospedes = new ArrayList<Hospede>();
+        
+        try {
+            FileReader leitor = new FileReader(arq);
+            BufferedReader bufferLeitura = new BufferedReader(leitor);
+            String linha = "";
+            String linhaDados = "";
+            int idHospede = 0;
+            int posNome = 0;
+            int posCpf = 0;
+            int posRg = 0;
+            int posFone = 0;
+            int posCelular = 0;
+            int posEmail = 0;
+            int posCodEndereco = 0;
+            int posDataNascimento = 0;
+            int posSexo = 0;
+            int posIdade = 0;
+            int posNacionalidade = 0;
+            int posPassaporte = 0;
+            int posObservacoes = 0;
+            int posProcedencia = 0;
+            int posLogradouro = 0;
+            int posNumero = 0;
+            int posBairro = 0;
+            int posCidade = 0;
+            int posCep = 0;
+            int posPais = 0;
+            int posEstado = 0;
+            int posComplemento = 0;
+            while ((linha = bufferLeitura.readLine()) != null){
+                Hospede hospede = new Hospede();
+                String[] linhaDadosSeparada = {"","","","","","","","","","","","","","","","","","","","","","","",""};
+                linhaDados = linha.substring(8, linha.length());
+                posNome = linhaDados.indexOf("Nome")+7;
+                linhaDadosSeparada[0] = linhaDados.substring(posNome, linhaDados.indexOf(',', posNome));
+                posCpf = linhaDados.indexOf("CPF")+6;
+                linhaDadosSeparada[1] = linhaDados.substring(posCpf, linhaDados.indexOf(',', posCpf));
+                posRg = linhaDados.indexOf("RG =")+5;
+                linhaDadosSeparada[2] = linhaDados.substring(posRg, linhaDados.indexOf(',', posRg));
+                posFone = linhaDados.indexOf("Telefone =")+10;
+                linhaDadosSeparada[3] = linhaDados.substring(posFone, linhaDados.indexOf(',', posFone));
+                posCelular = linhaDados.indexOf("Celular")+9;
+                linhaDadosSeparada[4] = linhaDados.substring(posCelular, linhaDados.indexOf(',', posCelular));
+                posEmail = linhaDados.indexOf("Email")+7;
+                linhaDadosSeparada[5] = linhaDados.substring(posEmail, linhaDados.indexOf(',', posEmail));
+                posCodEndereco = linhaDados.indexOf("CodEndereco")+13;
+                linhaDadosSeparada[7] = linhaDados.substring(posDataNascimento, linhaDados.indexOf(',', posDataNascimento));
+                posSexo = linhaDados.indexOf("Sexo")+6;
+                linhaDadosSeparada[8] = linhaDados.substring(posSexo, linhaDados.indexOf(',', posSexo));
+                posIdade = linhaDados.indexOf("Idade")+7;
+                linhaDadosSeparada[9] = linhaDados.substring(posIdade, linhaDados.indexOf(',', posIdade));
+                posNacionalidade = linhaDados.indexOf("Nacionalidade")+15;
+                linhaDadosSeparada[10] = linhaDados.substring(posNacionalidade, linhaDados.indexOf(',', posNacionalidade));
+                posPassaporte = linhaDados.indexOf("Passaporte")+12;
+                linhaDadosSeparada[11] = linhaDados.substring(posPassaporte, linhaDados.indexOf(',', posPassaporte));
+                posObservacoes = linhaDados.indexOf("Observacoes")+12;
+                linhaDadosSeparada[12] = linhaDados.substring(posObservacoes, linhaDados.indexOf(',', posObservacoes));
+                posLogradouro = linhaDados.indexOf("Logradouro")+12;
+                linhaDadosSeparada[13] = linhaDados.substring(posLogradouro, linhaDados.indexOf(',', posLogradouro));
+                posNumero = linhaDados.indexOf("Numero")+12;
+                linhaDadosSeparada[14] = linhaDados.substring(posNumero, linhaDados.indexOf(',', posNumero));
+                posBairro = linhaDados.indexOf("Bairro")+12;
+                linhaDadosSeparada[15] = linhaDados.substring(posBairro, linhaDados.indexOf(',', posBairro));
+                posCidade = linhaDados.indexOf("Cidade")+12;
+                linhaDadosSeparada[16] = linhaDados.substring(posCidade, linhaDados.indexOf(',', posCidade));
+                posCep = linhaDados.indexOf("CEP")+12;
+                linhaDadosSeparada[17] = linhaDados.substring(posCep, linhaDados.indexOf(',', posCep));
+                posPais = linhaDados.indexOf("Pais")+12;
+                linhaDadosSeparada[18] = linhaDados.substring(posPais, linhaDados.indexOf(',', posPais));
+                posEstado = linhaDados.indexOf("Estado")+12;
+                linhaDadosSeparada[19] = linhaDados.substring(posEstado, linhaDados.indexOf(',', posEstado));
+                posComplemento = linhaDados.indexOf("Complemento")+12;
+                hospede.setIdHospede(idHospede);
+                hospede.setNome(linhaDadosSeparada[0]);
+                hospede.setCpf(linhaDadosSeparada[1]);
+                hospede.setRg(linhaDadosSeparada[2]);
+                hospede.setFone(linhaDadosSeparada[3]);
+                hospede.setCelular(linhaDadosSeparada[4]);
+                hospede.setEmail(linhaDadosSeparada[5]);
+                hospede.setDataNascimento(linhaDadosSeparada[7]);
+                hospede.setSexo(linhaDadosSeparada[8]);
+                hospede.setIdade(linhaDadosSeparada[9]);
+                hospede.setNacionalidade(linhaDadosSeparada[10]);
+                hospede.setPassaporte(linhaDadosSeparada[11]);
+                hospedes.add(hospede);
+                idHospede++; 
+            }
+            leitor.close();
+        } catch (IOException e){
+            e.printStackTrace();            
+        }
+        return hospedes;        
+    }
+    
     public Hospede(Integer idHospede, 
             String procedencia, 
             String metodoDePagamento, 
@@ -27,7 +131,7 @@ public class Hospede extends Pessoa implements Serializable{
             Integer codEndereco, 
             String dataNascimento, 
             String sexo, 
-            Integer idade, 
+            String idade, 
             String nacionalidade, 
             String passaporte, 
             String observacoes, 
@@ -183,11 +287,11 @@ public class Hospede extends Pessoa implements Serializable{
         this.sexo = sexo;
     }
 
-    public Integer getIdade() {
+    public String getIdade() {
         return idade;
     }
 
-    public void setIdade(Integer idade) {
+    public void setIdade(String idade) {
         this.idade = idade;
     }
 

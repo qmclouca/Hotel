@@ -32,7 +32,7 @@ public class Funcionario extends Pessoa implements Serializable {
             Integer codEndereco, 
             String dataNascimento, 
             String sexo, 
-            Integer idade, 
+            String idade, 
             String nacionalidade, 
             String passaporte, 
             String complemento) {
@@ -222,11 +222,11 @@ public class Funcionario extends Pessoa implements Serializable {
         this.sexo = sexo;
     }
 
-    public Integer getIdade() {
+    public String getIdade() {
         return idade;
     }
 
-    public void setIdade(Integer idade) {
+    public void setIdade(String idade) {
         this.idade = idade;
     }
 

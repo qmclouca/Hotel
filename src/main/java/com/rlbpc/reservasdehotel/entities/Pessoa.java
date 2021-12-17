@@ -29,7 +29,7 @@ public class Pessoa extends Endereco implements Serializable, Comparable<Pessoa>
         Integer codEndereco;
         String dataNascimento;
         String sexo;
-        Integer idade;
+        String idade;
         String nacionalidade;
         String passaporte;
         String observacoes;
@@ -40,7 +40,7 @@ public class Pessoa extends Endereco implements Serializable, Comparable<Pessoa>
 
    
 
-    public Pessoa(Integer idPessoa, String nome, String cpf, String rg, String fone, String celular, String email, Integer codEndereco, String dataNascimento, String sexo, Integer idade, String nacionalidade, String passaporte, String observacoes) {
+    public Pessoa(Integer idPessoa, String nome, String cpf, String rg, String fone, String celular, String email, Integer codEndereco, String dataNascimento, String sexo, String idade, String nacionalidade, String passaporte, String observacoes) {
         this.idPessoa = idPessoa;
         this.nome = nome;
         this.cpf = cpf;
@@ -142,11 +142,11 @@ public class Pessoa extends Endereco implements Serializable, Comparable<Pessoa>
         this.sexo = sexo;
     }
 
-    public Integer getIdade() {
+    public String getIdade() {
         return idade;
     }
 
-    public void setIdade(Integer idade) {
+    public void setIdade(String idade) {
         this.idade = idade;
     }
 
