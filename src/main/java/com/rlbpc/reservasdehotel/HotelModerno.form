@@ -1076,10 +1076,9 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="jLabel51" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel47" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel44" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel43" min="-2" max="-2" attributes="0"/>
@@ -1087,14 +1086,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="NumeroPessoas" min="-2" pref="65" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jButton2" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Component id="NomeHospedePrincipal" min="-2" pref="264" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="NomeHospedePrincipal" min="-2" pref="264" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jLabel25" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
@@ -1235,7 +1227,7 @@
                           <Component id="FormaPagamento" min="-2" pref="349" max="-2" attributes="0"/>
                           <Component id="ValorTotal" min="-2" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jComboBox1" min="-2" pref="200" max="-2" attributes="0"/>
+                              <Component id="ApartamentoEscolhido" min="-2" pref="200" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jLabel54" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
@@ -1281,13 +1273,7 @@
                           <Component id="jLabel25" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="IdadeHospedePrincipal" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel47" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="NumeroPessoas" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel51" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="NomeHospedeAdicional1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1364,7 +1350,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel49" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="ApartamentoEscolhido" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel54" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="ValorDiariaReserva" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -1402,12 +1388,24 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JSpinner" name="HoraEntrada">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JSpinner" name="MinutoEntrada">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JSpinner" name="HoraSaida">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JSpinner" name="MinutoSaida">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
             </Component>
             <Component class="java.awt.Canvas" name="canvas1">
             </Component>
@@ -1417,6 +1415,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="NomeHospedePrincipal">
+              <Properties>
+                <Property name="autoscrolls" type="boolean" value="false"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel25">
               <Properties>
@@ -1424,10 +1425,8 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JSpinner" name="IdadeHospedePrincipal">
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel47">
               <Properties>
-                <Property name="text" type="java.lang.String" value="N&#xfa;mero de pessoas:"/>
+                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel48">
@@ -1448,6 +1447,7 @@
             <Component class="javax.swing.JButton" name="BtnCadastrarReserva">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Confirmar Reserva"/>
+                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnCadastrarReservaActionPerformed"/>
@@ -1474,22 +1474,16 @@
                     <StringItem index="4" value="BitCoin "/>
                   </StringArray>
                 </Property>
+                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JSpinner" name="NumeroPessoas">
-            </Component>
-            <Component class="javax.swing.JButton" name="jButton2">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Adicionar h&#xf3;spedes"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
-              </Events>
-            </Component>
             <Component class="javax.swing.JSpinner" name="DiaEntrada">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JComboBox" name="MesEntrada">
               <Properties>
@@ -1509,14 +1503,21 @@
                     <StringItem index="11" value="dezembro"/>
                   </StringArray>
                 </Property>
+                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
             <Component class="javax.swing.JSpinner" name="AnoEntrada">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JSpinner" name="DiaSaida">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JComboBox" name="MesSaida">
               <Properties>
@@ -1536,14 +1537,21 @@
                     <StringItem index="11" value="dezembro"/>
                   </StringArray>
                 </Property>
+                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
             <Component class="javax.swing.JSpinner" name="AnoSaida">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="NomeHospedeAdicional1">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel52">
               <Properties>
@@ -1551,8 +1559,14 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JSpinner" name="IdadeHospedeAdicional1">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="NomeHospedeAdicional2">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel53">
               <Properties>
@@ -1560,8 +1574,14 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JSpinner" name="IdadeHospedeAdicional2">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="NomeHospedeAdicional3">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel62">
               <Properties>
@@ -1569,8 +1589,14 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JSpinner" name="IdadeHospedeAdicional3">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="NomeHospedeAdicional4">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel63">
               <Properties>
@@ -1578,8 +1604,14 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JSpinner" name="IdadeHospedeAdicional4">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="NomeHospedeAdicional5">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel64">
               <Properties>
@@ -1587,8 +1619,14 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JSpinner" name="IdadeHospedeAdicional5">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="NomeHospedeAdicional6">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel65">
               <Properties>
@@ -1596,8 +1634,14 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JSpinner" name="IdadeHospedeAdicional6">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="NomeHospedeAdicional7">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel66">
               <Properties>
@@ -1605,8 +1649,14 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JSpinner" name="IdadeHospedeAdicional7">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="NomeHospedeAdicional8">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel67">
               <Properties>
@@ -1614,8 +1664,14 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JSpinner" name="IdadeHospedeAdicional8">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="NomeHospedeAdicional9">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel68">
               <Properties>
@@ -1623,8 +1679,14 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JSpinner" name="IdadeHospedeAdicional9">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="NomeHospedeAdicional10">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel69">
               <Properties>
@@ -1632,8 +1694,11 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JSpinner" name="IdadeHospedeAdicional10">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox1">
+            <Component class="javax.swing.JComboBox" name="ApartamentoEscolhido">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="4">
@@ -1643,6 +1708,7 @@
                     <StringItem index="3" value="Item 4"/>
                   </StringArray>
                 </Property>
+                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>

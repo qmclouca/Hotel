@@ -222,15 +222,12 @@ public class HotelModerno extends javax.swing.JFrame{
         NomeHospedePrincipal = new javax.swing.JTextField();
         jLabel25 = new javax.swing.JLabel();
         IdadeHospedePrincipal = new javax.swing.JSpinner();
-        jLabel47 = new javax.swing.JLabel();
         jLabel48 = new javax.swing.JLabel();
         ValorTotal = new javax.swing.JLabel();
         BtnCadastrarReserva = new javax.swing.JButton();
         jLabel50 = new javax.swing.JLabel();
         jLabel51 = new javax.swing.JLabel();
         FormaPagamento = new javax.swing.JComboBox<>();
-        NumeroPessoas = new javax.swing.JSpinner();
-        jButton2 = new javax.swing.JButton();
         DiaEntrada = new javax.swing.JSpinner();
         MesEntrada = new javax.swing.JComboBox<>();
         AnoEntrada = new javax.swing.JSpinner();
@@ -267,7 +264,7 @@ public class HotelModerno extends javax.swing.JFrame{
         NomeHospedeAdicional10 = new javax.swing.JTextField();
         jLabel69 = new javax.swing.JLabel();
         IdadeHospedeAdicional10 = new javax.swing.JSpinner();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        ApartamentoEscolhido = new javax.swing.JComboBox<>();
         jLabel49 = new javax.swing.JLabel();
         jLabel54 = new javax.swing.JLabel();
         ValorDiariaReserva = new javax.swing.JLabel();
@@ -875,11 +872,21 @@ public class HotelModerno extends javax.swing.JFrame{
 
         jLabel46.setText("Horário da saída:");
 
+        HoraEntrada.setEnabled(false);
+
+        MinutoEntrada.setEnabled(false);
+
+        HoraSaida.setEnabled(false);
+
+        MinutoSaida.setEnabled(false);
+
         jLabel24.setText("Hóspede prinicipal:");
+
+        NomeHospedePrincipal.setAutoscrolls(false);
 
         jLabel25.setText("Idade:");
 
-        jLabel47.setText("Número de pessoas:");
+        IdadeHospedePrincipal.setEnabled(false);
 
         jLabel48.setText("Valor total (R$):");
 
@@ -887,6 +894,7 @@ public class HotelModerno extends javax.swing.JFrame{
         ValorTotal.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         BtnCadastrarReserva.setText("Confirmar Reserva");
+        BtnCadastrarReserva.setEnabled(false);
         BtnCadastrarReserva.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BtnCadastrarReservaActionPerformed(evt);
@@ -898,39 +906,84 @@ public class HotelModerno extends javax.swing.JFrame{
         jLabel51.setText("Demais hóspedes:");
 
         FormaPagamento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dinheiro", "Cartão de débto", "Cartão de crédito", "PIX", "BitCoin " }));
+        FormaPagamento.setEnabled(false);
 
-        jButton2.setText("Adicionar hóspedes");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
+        DiaEntrada.setEnabled(false);
 
         MesEntrada.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro" }));
+        MesEntrada.setEnabled(false);
+
+        AnoEntrada.setEnabled(false);
+
+        DiaSaida.setEnabled(false);
 
         MesSaida.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro" }));
+        MesSaida.setEnabled(false);
+
+        AnoSaida.setEnabled(false);
+
+        NomeHospedeAdicional1.setEnabled(false);
 
         jLabel52.setText("Idade:");
 
+        IdadeHospedeAdicional1.setEnabled(false);
+
+        NomeHospedeAdicional2.setEnabled(false);
+
         jLabel53.setText("Idade:");
+
+        IdadeHospedeAdicional2.setEnabled(false);
+
+        NomeHospedeAdicional3.setEnabled(false);
 
         jLabel62.setText("Idade:");
 
+        IdadeHospedeAdicional3.setEnabled(false);
+
+        NomeHospedeAdicional4.setEnabled(false);
+
         jLabel63.setText("Idade:");
+
+        IdadeHospedeAdicional4.setEnabled(false);
+
+        NomeHospedeAdicional5.setEnabled(false);
 
         jLabel64.setText("Idade:");
 
+        IdadeHospedeAdicional5.setEnabled(false);
+
+        NomeHospedeAdicional6.setEnabled(false);
+
         jLabel65.setText("Idade:");
+
+        IdadeHospedeAdicional6.setEnabled(false);
+
+        NomeHospedeAdicional7.setEnabled(false);
 
         jLabel66.setText("Idade:");
 
+        IdadeHospedeAdicional7.setEnabled(false);
+
+        NomeHospedeAdicional8.setEnabled(false);
+
         jLabel67.setText("Idade:");
+
+        IdadeHospedeAdicional8.setEnabled(false);
+
+        NomeHospedeAdicional9.setEnabled(false);
 
         jLabel68.setText("Idade:");
 
+        IdadeHospedeAdicional9.setEnabled(false);
+
+        NomeHospedeAdicional10.setEnabled(false);
+
         jLabel69.setText("Idade:");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        IdadeHospedeAdicional10.setEnabled(false);
+
+        ApartamentoEscolhido.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ApartamentoEscolhido.setEnabled(false);
 
         jLabel49.setText("Apartamento:");
 
@@ -944,22 +997,16 @@ public class HotelModerno extends javax.swing.JFrame{
         GuiaReservasLayout.setHorizontalGroup(
             GuiaReservasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(GuiaReservasLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addGap(26, 26, 26)
                 .addGroup(GuiaReservasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel51)
-                    .addComponent(jLabel47)
                     .addComponent(jLabel24)
                     .addComponent(jLabel44)
                     .addComponent(jLabel43))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(GuiaReservasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(GuiaReservasLayout.createSequentialGroup()
-                        .addGroup(GuiaReservasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, GuiaReservasLayout.createSequentialGroup()
-                                .addComponent(NumeroPessoas, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(NomeHospedePrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(NomeHospedePrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel25)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1073,7 +1120,7 @@ public class HotelModerno extends javax.swing.JFrame{
                     .addComponent(FormaPagamento, javax.swing.GroupLayout.PREFERRED_SIZE, 349, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ValorTotal)
                     .addGroup(GuiaReservasLayout.createSequentialGroup()
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ApartamentoEscolhido, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel54)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1111,12 +1158,7 @@ public class HotelModerno extends javax.swing.JFrame{
                     .addComponent(NomeHospedePrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel25)
                     .addComponent(IdadeHospedePrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(GuiaReservasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel47)
-                    .addComponent(NumeroPessoas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(26, 26, 26)
                 .addGroup(GuiaReservasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel51)
                     .addComponent(NomeHospedeAdicional1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1179,7 +1221,7 @@ public class HotelModerno extends javax.swing.JFrame{
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(GuiaReservasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel49)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ApartamentoEscolhido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel54)
                     .addComponent(ValorDiariaReserva))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1471,6 +1513,42 @@ public class HotelModerno extends javax.swing.JFrame{
                 TxtDescricaoSuite.setEnabled(true);
                 Login.setText("");
                 Password.setText("");
+                DiaEntrada.setEnabled(true);
+                MesEntrada.setEnabled(true);
+                AnoEntrada.setEnabled(true);
+                HoraEntrada.setEnabled(true);
+                MinutoEntrada.setEnabled(true);
+                DiaSaida.setEnabled(true);
+                MesSaida.setEnabled(true);
+                AnoSaida.setEnabled(true);
+                HoraSaida.setEnabled(true);
+                MinutoSaida.setEnabled(true);
+                NomeHospedePrincipal.setEnabled(true);
+                IdadeHospedePrincipal.setEnabled(true);
+                NomeHospedeAdicional1.setEnabled(true);
+                IdadeHospedeAdicional1.setEnabled(true);
+                NomeHospedeAdicional2.setEnabled(true);
+                IdadeHospedeAdicional2.setEnabled(true);
+                NomeHospedeAdicional3.setEnabled(true);
+                IdadeHospedeAdicional3.setEnabled(true);
+                NomeHospedeAdicional4.setEnabled(true);
+                IdadeHospedeAdicional4.setEnabled(true);
+                NomeHospedeAdicional5.setEnabled(true);
+                IdadeHospedeAdicional5.setEnabled(true);
+                NomeHospedeAdicional6.setEnabled(true);
+                IdadeHospedeAdicional6.setEnabled(true);
+                NomeHospedeAdicional7.setEnabled(true);
+                IdadeHospedeAdicional7.setEnabled(true);
+                NomeHospedeAdicional8.setEnabled(true);
+                IdadeHospedeAdicional8.setEnabled(true);
+                NomeHospedeAdicional9.setEnabled(true);
+                IdadeHospedeAdicional9.setEnabled(true);
+                NomeHospedeAdicional10.setEnabled(true);
+                IdadeHospedeAdicional10.setEnabled(true);
+                FormaPagamento.setEnabled(true);
+                ApartamentoEscolhido.setEnabled(true);
+                ValorDiariaReserva.setEnabled(true);
+                ValorTotal.setEnabled(true);                
             }
         }
     }//GEN-LAST:event_BtnAutorizarActionPerformed
@@ -1523,6 +1601,42 @@ public class HotelModerno extends javax.swing.JFrame{
         TxtDescricaoSuite.setEnabled(false);
         Login.setText("");
         Password.setText("");
+        DiaEntrada.setEnabled(false);
+        MesEntrada.setEnabled(false);
+        AnoEntrada.setEnabled(false);
+        HoraEntrada.setEnabled(false);
+        MinutoEntrada.setEnabled(false);
+        DiaSaida.setEnabled(false);
+        MesSaida.setEnabled(false);
+        AnoSaida.setEnabled(false);
+        HoraSaida.setEnabled(false);
+        MinutoSaida.setEnabled(false);
+        NomeHospedePrincipal.setEnabled(false);
+        IdadeHospedePrincipal.setEnabled(false);
+        NomeHospedeAdicional1.setEnabled(false);
+        IdadeHospedeAdicional1.setEnabled(false);
+        NomeHospedeAdicional2.setEnabled(false);
+        IdadeHospedeAdicional2.setEnabled(false);
+        NomeHospedeAdicional3.setEnabled(false);
+        IdadeHospedeAdicional3.setEnabled(false);
+        NomeHospedeAdicional4.setEnabled(false);
+        IdadeHospedeAdicional4.setEnabled(false);
+        NomeHospedeAdicional5.setEnabled(false);
+        IdadeHospedeAdicional5.setEnabled(false);
+        NomeHospedeAdicional6.setEnabled(false);
+        IdadeHospedeAdicional6.setEnabled(false);
+        NomeHospedeAdicional7.setEnabled(false);
+        IdadeHospedeAdicional7.setEnabled(false);
+        NomeHospedeAdicional8.setEnabled(false);
+        IdadeHospedeAdicional8.setEnabled(false);
+        NomeHospedeAdicional9.setEnabled(false);
+        IdadeHospedeAdicional9.setEnabled(false);
+        NomeHospedeAdicional10.setEnabled(false);
+        IdadeHospedeAdicional10.setEnabled(false);
+        FormaPagamento.setEnabled(false);
+        ApartamentoEscolhido.setEnabled(false);
+        ValorDiariaReserva.setEnabled(false);
+        ValorTotal.setEnabled(false);
     }//GEN-LAST:event_BtnBloquearActionPerformed
 
     private void BtnBuscarFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBuscarFuncionarioActionPerformed
@@ -1566,10 +1680,6 @@ public class HotelModerno extends javax.swing.JFrame{
         // TODO add your handling code here:
     }//GEN-LAST:event_NumSuiteActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     private void BtnCadastrarReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCadastrarReservaActionPerformed
         
     }//GEN-LAST:event_BtnCadastrarReservaActionPerformed
@@ -1587,6 +1697,7 @@ public class HotelModerno extends javax.swing.JFrame{
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JSpinner AnoEntrada;
     public javax.swing.JSpinner AnoSaida;
+    public javax.swing.JComboBox<String> ApartamentoEscolhido;
     public javax.swing.JTextField Bairro;
     public javax.swing.JTextField Bairro1;
     public javax.swing.JButton BtnAutorizar;
@@ -1662,7 +1773,6 @@ public class HotelModerno extends javax.swing.JFrame{
     public javax.swing.JTextField NumSuite;
     public javax.swing.JTextField Numero;
     public javax.swing.JTextField Numero1;
-    public javax.swing.JSpinner NumeroPessoas;
     public javax.swing.JTextField Pais;
     public javax.swing.JTextField Pais1;
     public javax.swing.JTextField Passaporte;
@@ -1675,8 +1785,6 @@ public class HotelModerno extends javax.swing.JFrame{
     public javax.swing.JLabel ValorDiariaReserva;
     public javax.swing.JLabel ValorTotal;
     public java.awt.Canvas canvas1;
-    public javax.swing.JButton jButton2;
-    public javax.swing.JComboBox<String> jComboBox1;
     public javax.swing.JLabel jLabel1;
     public javax.swing.JLabel jLabel10;
     public javax.swing.JLabel jLabel11;
@@ -1718,7 +1826,6 @@ public class HotelModerno extends javax.swing.JFrame{
     public javax.swing.JLabel jLabel44;
     public javax.swing.JLabel jLabel45;
     public javax.swing.JLabel jLabel46;
-    public javax.swing.JLabel jLabel47;
     public javax.swing.JLabel jLabel48;
     public javax.swing.JLabel jLabel49;
     public javax.swing.JLabel jLabel5;

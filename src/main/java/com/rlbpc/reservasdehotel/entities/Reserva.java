@@ -5,14 +5,10 @@
 package com.rlbpc.reservasdehotel.entities;
 
 import java.io.Serializable;
-import java.util.Date;
-import java.util.Objects;
-
 /**
  *
  * @author Rodolfo Bortoluzzi
  */
-
 public class Reserva implements Serializable {
     private static final long serialVersionUID = 1L;
     int idReserva;
