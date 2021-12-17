@@ -9,6 +9,8 @@ import java.io.Serializable;
  *
  * @author Rodolfo Bortoluzzi
  */
+
+
 public class Reserva implements Serializable {
     private static final long serialVersionUID = 1L;
     int idReserva;

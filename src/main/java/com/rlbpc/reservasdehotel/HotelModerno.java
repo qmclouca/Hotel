@@ -18,6 +18,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ComboBoxModel;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 /**
  *
@@ -281,6 +283,11 @@ public class HotelModerno extends javax.swing.JFrame{
         setSize(new java.awt.Dimension(600, 900));
 
         MultiGuiasNivel1.setEnabled(false);
+        MultiGuiasNivel1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                MultiGuiasNivel1FocusGained(evt);
+            }
+        });
 
         MultiGuiasNivel2.setEnabled(false);
 
@@ -515,7 +522,7 @@ public class HotelModerno extends javax.swing.JFrame{
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 471, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 74, Short.MAX_VALUE))
+                .addGap(0, 297, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1548,7 +1555,21 @@ public class HotelModerno extends javax.swing.JFrame{
                 FormaPagamento.setEnabled(true);
                 ApartamentoEscolhido.setEnabled(true);
                 ValorDiariaReserva.setEnabled(true);
-                ValorTotal.setEnabled(true);                
+                ValorTotal.setEnabled(true);
+                BtnCadastrarReserva.setEnabled(true);
+                List<Apartamento> apartamentos = Apartamento.lerArquivoApartamento();
+                int nApartamentosCadastrados = apartamentos.size();
+                System.out.println(nApartamentosCadastrados);
+                String[] listaAps = new String[nApartamentosCadastrados];
+                int count = 0;
+                for (Apartamento apartamento : apartamentos){
+                    System.out.println(apartamento);
+                    listaAps[count] = apartamento.getNumeroApartamento();
+                    count++;
+                }
+                
+                
+                ApartamentoEscolhido.setModel(new DefaultComboBoxModel(listaAps));
             }
         }
     }//GEN-LAST:event_BtnAutorizarActionPerformed
@@ -1637,6 +1658,7 @@ public class HotelModerno extends javax.swing.JFrame{
         ApartamentoEscolhido.setEnabled(false);
         ValorDiariaReserva.setEnabled(false);
         ValorTotal.setEnabled(false);
+        BtnCadastrarReserva.setEnabled(false);
     }//GEN-LAST:event_BtnBloquearActionPerformed
 
     private void BtnBuscarFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBuscarFuncionarioActionPerformed
@@ -1683,6 +1705,13 @@ public class HotelModerno extends javax.swing.JFrame{
     private void BtnCadastrarReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCadastrarReservaActionPerformed
         
     }//GEN-LAST:event_BtnCadastrarReservaActionPerformed
+
+    private void MultiGuiasNivel1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_MultiGuiasNivel1FocusGained
+        List<Apartamento> apartamentos = Apartamento.lerArquivoApartamento();
+        for (Apartamento apartamento : apartamentos){
+            System.out.println(apartamento);
+        }
+    }//GEN-LAST:event_MultiGuiasNivel1FocusGained
     /**
      * @param args the command line arguments
      */
