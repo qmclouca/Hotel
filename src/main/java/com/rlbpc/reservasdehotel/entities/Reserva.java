@@ -9,6 +9,13 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import com.rlbpc.reservasdehotel.HotelModerno;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import org.joda.time.DateTime;
+import org.joda.time.format.DateTimeFormat;
 
 
 /**
@@ -19,16 +26,8 @@ public class Reserva implements Serializable {
     private static final long serialVersionUID = 1L;
     private static Calendar DiaEntrada;
     int idReserva;
-    int diaEntrada;
-    String mesEntrada;
-    int anoEntrada;
-    int horaEntrada;
-    int minutoEntrada;
-    int diaSaida;
-    String mesSaida;
-    int anoSaida;
-    int horaSaida;
-    int minutoSaida;
+    DateTime dataInicial;
+    DateTime dataFinal;
     String nomeHospedePrincipal;
     int idadeHospedePrincipal;
     String nomeHospedeAdicional1;
@@ -58,19 +57,70 @@ public class Reserva implements Serializable {
     
     public Reserva(){
     }
-   
-    public Reserva(int idReserva, int diaEntrada, String mesEntrada, int anoEntrada, int horaEntrada, int minutoEntrada, int diaSaida, String mesSaida, int anoSaida, int horaSaida, int minutoSaida, String nomeHospedePrincipal, int idadeHospedePrincipal, String nomeHospedeAdicional1, int idadeHospedeAdicional1, String nomeHospedeAdicional2, int idadeHospedeAdicional2, String nomeHospedeAdicional3, int idadeHospedeAdicional3, String nomeHospedeAdicional4, int idadeHospedeAdicional4, String nomeHospedeAdicional5, int idadeHospedeAdicional5, String nomeHospedeAdicional6, int idadeHospedeAdicional6, String nomeHospedeAdicional7, int idadeHospedeAdicional7, String nomeHospedeAdicional8, int idadeHospedeAdicional8, String nomeHospedeAdicional9, int idadeHospedeAdicional9, String nomeHospedeAdicional10, int idadeHospedeAdicional10, String formaPagamento, String apartamento, float valorDiaria, float valorTotal) {
+    
+    public static ArrayList<Reserva> lerArquivoReserva(){
+        File dir = new File("F:\\Rodolfo\\Dados I\\ReservasDeHotel\\src\\main\\java\\Persistencias");
+        File arq = new File(dir, "reservas.txt");
+        ArrayList<Reserva> reservas = new ArrayList<Reserva>();
+        
+        try {
+            FileReader leitor = new FileReader(arq);
+            BufferedReader bufferLeitura = new BufferedReader(leitor);
+            String linha = "";
+            String linhaDados = "";
+            int idReserva = 0;
+            DateTime dataInicial;
+            DateTime dataFinal;
+            String NomeHospedePrincipal = "";
+            String NumeroApartamento = "";
+            int posDataInicial = 0;        
+            int posDataFinal = 0;
+            int posNomeHospedePrincipal = 0;
+            int posNumeroApartamento = 0;
+            String pattern = "dd-MMM-yy hh.mm.ss aa";
+            while ((linha = bufferLeitura.readLine()) != null){
+                Reserva reserva = new Reserva();
+                String[] linhaDadosSeparada = {"","","",""};
+                linhaDados = linha.substring(8, linha.length());
+                posDataInicial = linhaDados.indexOf("dataInicial")+11;
+                dataInicial = DateTime.parse(linhaDados.substring(posDataInicial, linhaDados.indexOf(',', posDataInicial)), DateTimeFormat.forPattern(pattern));
+                linhaDadosSeparada[0] = linhaDados.substring(posDataInicial, linhaDados.indexOf(',', posDataInicial));
+                posDataFinal = linhaDados.indexOf("dataFinal")+10;
+                dataFinal = DateTime.parse(linhaDados.substring(posDataFinal, linhaDados.indexOf(',', posDataFinal)), DateTimeFormat.forPattern(pattern));
+                linhaDadosSeparada[1] = linhaDados.substring(posDataFinal, linhaDados.indexOf(',', posDataFinal));
+                posNomeHospedePrincipal = linhaDados.indexOf("nomeHospedePrincipal")+21;
+                linhaDadosSeparada[2] = linhaDados.substring(posNomeHospedePrincipal, linhaDados.indexOf(',', posNomeHospedePrincipal));
+                posNumeroApartamento = linhaDados.indexOf("apartamento")+12;
+                linhaDadosSeparada[3] = linhaDados.substring(posNumeroApartamento, linhaDados.indexOf('}', linhaDados.length()-1));
+                reserva.setDataInicial(dataInicial);
+                reserva.setDataFinal(dataFinal);
+                reserva.setNomeHospedePrincipal(linhaDadosSeparada[2]);
+                reservas.add(reserva);
+                idReserva++; 
+            }
+            leitor.close();
+        } catch (IOException e){
+            e.printStackTrace();            
+        }
+        return reservas;        
+    }
+    
+    public Reserva(DateTime dataInicial, DateTime dataFinal, String nomeHospedePrincipal, String apartamento) {
+        this.dataInicial = dataInicial;
+        this.dataFinal = dataFinal;
+        this.nomeHospedePrincipal = nomeHospedePrincipal;
+        this.apartamento = apartamento;
+    }
+
+    @Override
+    public String toString() {
+        return "Reserva{" + "dataInicial=" + dataInicial + ", dataFinal=" + dataFinal + ", nomeHospedePrincipal=" + nomeHospedePrincipal + ", apartamento=" + apartamento + '}';
+    }
+
+    public Reserva(int idReserva, DateTime dataInicial, DateTime dataFinal, String nomeHospedePrincipal, int idadeHospedePrincipal, String nomeHospedeAdicional1, int idadeHospedeAdicional1, String nomeHospedeAdicional2, int idadeHospedeAdicional2, String nomeHospedeAdicional3, int idadeHospedeAdicional3, String nomeHospedeAdicional4, int idadeHospedeAdicional4, String nomeHospedeAdicional5, int idadeHospedeAdicional5, String nomeHospedeAdicional6, int idadeHospedeAdicional6, String nomeHospedeAdicional7, int idadeHospedeAdicional7, String nomeHospedeAdicional8, int idadeHospedeAdicional8, String nomeHospedeAdicional9, int idadeHospedeAdicional9, String nomeHospedeAdicional10, int idadeHospedeAdicional10, String formaPagamento, String apartamento, float valorDiaria, float valorTotal) {
         this.idReserva = idReserva;
-        this.diaEntrada = diaEntrada;
-        this.mesEntrada = mesEntrada;
-        this.anoEntrada = anoEntrada;
-        this.horaEntrada = horaEntrada;
-        this.minutoEntrada = minutoEntrada;
-        this.diaSaida = diaSaida;
-        this.mesSaida = mesSaida;
-        this.anoSaida = anoSaida;
-        this.horaSaida = horaSaida;
-        this.minutoSaida = minutoSaida;
+        this.dataInicial = dataInicial;
+        this.dataFinal = dataFinal;
         this.nomeHospedePrincipal = nomeHospedePrincipal;
         this.idadeHospedePrincipal = idadeHospedePrincipal;
         this.nomeHospedeAdicional1 = nomeHospedeAdicional1;
@@ -99,6 +149,14 @@ public class Reserva implements Serializable {
         this.valorTotal = valorTotal;
     }
 
+    public static Calendar getDiaEntrada() {
+        return DiaEntrada;
+    }
+
+    public static void setDiaEntrada(Calendar DiaEntrada) {
+        Reserva.DiaEntrada = DiaEntrada;
+    }
+
     public int getIdReserva() {
         return idReserva;
     }
@@ -107,84 +165,20 @@ public class Reserva implements Serializable {
         this.idReserva = idReserva;
     }
 
-    public int getDiaEntrada() {
-        return diaEntrada;
+    public DateTime getDataInicial() {
+        return dataInicial;
     }
 
-    public void setDiaEntrada(int diaEntrada) {
-        this.diaEntrada = diaEntrada;
+    public void setDataInicial(DateTime dataInicial) {
+        this.dataInicial = dataInicial;
     }
 
-    public String getMesEntrada() {
-        return mesEntrada;
+    public DateTime getDataFinal() {
+        return dataFinal;
     }
 
-    public void setMesEntrada(String mesEntrada) {
-        this.mesEntrada = mesEntrada;
-    }
-
-    public int getAnoEntrada() {
-        return anoEntrada;
-    }
-
-    public void setAnoEntrada(int anoEntrada) {
-        this.anoEntrada = anoEntrada;
-    }
-
-    public int getHoraEntrada() {
-        return horaEntrada;
-    }
-
-    public void setHoraEntrada(int horaEntrada) {
-        this.horaEntrada = horaEntrada;
-    }
-
-    public int getMinutoEntrada() {
-        return minutoEntrada;
-    }
-
-    public void setMinutoEntrada(int minutoEntrada) {
-        this.minutoEntrada = minutoEntrada;
-    }
-
-    public int getDiaSaida() {
-        return diaSaida;
-    }
-
-    public void setDiaSaida(int diaSaida) {
-        this.diaSaida = diaSaida;
-    }
-
-    public String getMesSaida() {
-        return mesSaida;
-    }
-
-    public void setMesSaida(String mesSaida) {
-        this.mesSaida = mesSaida;
-    }
-
-    public int getAnoSaida() {
-        return anoSaida;
-    }
-
-    public void setAnoSaida(int anoSaida) {
-        this.anoSaida = anoSaida;
-    }
-
-    public int getHoraSaida() {
-        return horaSaida;
-    }
-
-    public void setHoraSaida(int horaSaida) {
-        this.horaSaida = horaSaida;
-    }
-
-    public int getMinutoSaida() {
-        return minutoSaida;
-    }
-
-    public void setMinutoSaida(int minutoSaida) {
-        this.minutoSaida = minutoSaida;
+    public void setDataFinal(DateTime dataFinal) {
+        this.dataFinal = dataFinal;
     }
 
     public String getNomeHospedePrincipal() {
@@ -398,7 +392,7 @@ public class Reserva implements Serializable {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 67 * hash + this.idReserva;
+        hash = 29 * hash + this.idReserva;
         return hash;
     }
 
@@ -419,6 +413,7 @@ public class Reserva implements Serializable {
         }
         return true;
     }
+   
     
     
 }

@@ -30,6 +30,8 @@ import org.joda.time.Days;
 
 
 public class HotelModerno extends javax.swing.JFrame{
+    DateTime dataInicial;
+    DateTime dataFinal;
     List<Funcionario> listaFuncionario = new ArrayList<Funcionario>();
     List<Hospede> listaHospede = new ArrayList<Hospede>();
     List<Reserva> listaReserva = new ArrayList<Reserva>();
@@ -1452,10 +1454,7 @@ public class HotelModerno extends javax.swing.JFrame{
     }//GEN-LAST:event_BtnCadastraClienteActionPerformed
 
     private void BtnBuscarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBuscarClienteActionPerformed
-        //Statement dbstmt = null; 
-        //hospede.setNome(Nome.toString());
-        //hospede.setCpf(Cpf.toString());
-        //dbstmt = DataBank(dbdriver, dburl, user, pass);
+        
         
     }//GEN-LAST:event_BtnBuscarClienteActionPerformed
 
@@ -1784,7 +1783,27 @@ public class HotelModerno extends javax.swing.JFrame{
     }//GEN-LAST:event_MultiGuiasNivel1FocusGained
 
     private void BtnCadastrarReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCadastrarReservaActionPerformed
+        Path arqReservas = Paths.get("F:\\Rodolfo\\Dados I\\ReservasDeHotel\\src\\main\\java\\Persistencias\\reservas.txt");
+        Reserva reserva = new Reserva();
+        reserva.setDataInicial(dataInicial);
+        reserva.setDataFinal(dataFinal);
+        reserva.setApartamento(ApartamentoEscolhido.getSelectedItem().toString());
+        reserva.setNomeHospedePrincipal(NomeHospedePrincipal.getSelectedItem().toString());
+        listaReserva.add(new Reserva(
+                reserva.getDataInicial(),
+                reserva.getDataFinal(),
+                reserva.getApartamento(),
+                reserva.getNomeHospedeAdicional1()));
+        //for (Funcionario funcionario:listaFuncionario) System.out.println(funcionario);
+        try {
+            salvaReserva(arqReservas.toString(), listaReserva);
+        } catch (Exception ex) {
+            System.out.println("modifique o caminho do arquivo reservas.txt e crie o mesmo antes de rodar o programa." );
+            Logger.getLogger(HotelModerno.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
+        Logger.getLogger(HotelModerno.class.getName()).log(Level.INFO, null, "Reserva cadastrada com sucesso.");
+        JOptionPane.showMessageDialog(null, "A reserva foi cadastrada com sucesso." , "Cadastramento", HEIGHT);
     }//GEN-LAST:event_BtnCadastrarReservaActionPerformed
 
     private void NomeHospedePrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NomeHospedePrincipalActionPerformed
@@ -2064,9 +2083,9 @@ public class HotelModerno extends javax.swing.JFrame{
         System.out.println(diaFinal);
         System.out.println(horaInicial);
         System.out.println(horaFinal);
-        DateTime dataInicial = new DateTime(anoInicial, mesInicial2, diaInicial, horaInicial,1);
+        dataInicial = new DateTime(anoInicial, mesInicial2, diaInicial, horaInicial,1);
         System.out.println("data incial: "+dataInicial);
-        DateTime dataFinal = new DateTime(anoFinal, mesFinal2, diaFinal, horaFinal,1);
+        dataFinal = new DateTime(anoFinal, mesFinal2, diaFinal, horaFinal,1);
         System.out.println("data final: "+dataFinal);
         diarias = Days.daysBetween(dataInicial,dataFinal).getDays();
         System.out.println("diaria: "+diarias);
