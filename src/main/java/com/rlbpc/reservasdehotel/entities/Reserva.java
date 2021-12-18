@@ -5,14 +5,19 @@
 package com.rlbpc.reservasdehotel.entities;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import com.rlbpc.reservasdehotel.HotelModerno;
+
+
 /**
  *
  * @author Rodolfo Bortoluzzi
  */
-
-
 public class Reserva implements Serializable {
     private static final long serialVersionUID = 1L;
+    private static Calendar DiaEntrada;
     int idReserva;
     int diaEntrada;
     String mesEntrada;
@@ -53,7 +58,7 @@ public class Reserva implements Serializable {
     
     public Reserva(){
     }
-
+   
     public Reserva(int idReserva, int diaEntrada, String mesEntrada, int anoEntrada, int horaEntrada, int minutoEntrada, int diaSaida, String mesSaida, int anoSaida, int horaSaida, int minutoSaida, String nomeHospedePrincipal, int idadeHospedePrincipal, String nomeHospedeAdicional1, int idadeHospedeAdicional1, String nomeHospedeAdicional2, int idadeHospedeAdicional2, String nomeHospedeAdicional3, int idadeHospedeAdicional3, String nomeHospedeAdicional4, int idadeHospedeAdicional4, String nomeHospedeAdicional5, int idadeHospedeAdicional5, String nomeHospedeAdicional6, int idadeHospedeAdicional6, String nomeHospedeAdicional7, int idadeHospedeAdicional7, String nomeHospedeAdicional8, int idadeHospedeAdicional8, String nomeHospedeAdicional9, int idadeHospedeAdicional9, String nomeHospedeAdicional10, int idadeHospedeAdicional10, String formaPagamento, String apartamento, float valorDiaria, float valorTotal) {
         this.idReserva = idReserva;
         this.diaEntrada = diaEntrada;
